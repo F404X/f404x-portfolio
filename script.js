@@ -150,3 +150,44 @@ if (ctx && hero) {
   resizeCanvas();
   syncAnimation();
 }
+
+// Assemble the address at runtime instead of exposing a plain email string
+// in HTML or JS source. This only deters basic static email harvesters.
+const emailButton = document.getElementById("copy-email");
+const emailDisplay = document.getElementById("email-display");
+const emailFeedback = document.getElementById("email-feedback");
+
+if (emailButton && emailDisplay && emailFeedback) {
+  const mailbox = String.fromCharCode(99, 111, 110, 116, 97, 99, 116);
+  const domain = String.fromCharCode(102, 52, 48, 52, 120, 46, 110, 101, 116);
+  const email = mailbox + "@" + domain;
+
+  emailDisplay.textContent = email;
+
+  emailButton.addEventListener("click", async () => {
+    let copied = false;
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(email);
+        copied = true;
+      } catch { /* Try the legacy clipboard fallback. */ }
+    }
+
+    if (!copied) {
+      const field = document.createElement("textarea");
+      field.value = email;
+      field.setAttribute("readonly", "");
+      field.style.cssText = "position:fixed;left:-9999px;top:0;opacity:0";
+      document.body.appendChild(field);
+      try {
+        field.select();
+        copied = document.execCommand("copy");
+      } catch { /* Manual copy is offered below. */ }
+      finally { field.remove(); }
+    }
+
+    emailFeedback.textContent = copied
+      ? "Email copied to clipboard."
+      : "Automatic copy is unavailable. Please copy this address manually: " + email;
+  });
+}

@@ -265,7 +265,7 @@ a { color: inherit; }
   margin: 1.5rem 0 0;
   list-style: none;
 }
-.links a {
+.links a, .links button {
   display: inline-block;
   padding: 0.6rem 1.3rem;
   background: var(--yellow);
@@ -275,7 +275,40 @@ a { color: inherit; }
   border-radius: 0.5rem;
   transition: background 0.2s;
 }
-.links a:hover { background: var(--yellow-strong); }
+.links a:hover, .links button:hover { background: var(--yellow-strong); }
+
+.links button {
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  cursor: pointer;
+}
+.links .email-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.email-copy__hint {
+  font-size: 1.12em;
+  line-height: 1;
+}
+.email-feedback:not(:empty) {
+  display: block;
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.section .contact__hub {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.contact__hub a {
+  color: var(--accent-text);
+  text-underline-offset: 3px;
+}
+.contact__hub a:hover { text-decoration-thickness: 2px; }
+
 .footer {
   padding: 2rem 1.5rem;
   text-align: center;
