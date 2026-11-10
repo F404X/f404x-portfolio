@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#121210">
+  <meta name="theme-color" content="#10110f">
   <meta name="description" content="F404X — Enzo dos Santos. Computer Science student interested in information security, automation, and software development.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="F404X | Enzo dos Santos">
@@ -19,142 +19,130 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="topbar">
-    <a class="topbar__logo" href="#home" aria-label="F404X — home">F404X</a>
-    <nav class="topbar__nav" aria-label="Main navigation">
-      <a href="#sobre">About me</a>
-      <a href="#habilidades">Skills</a>
-      <a href="#projetos">Projects</a>
-      <a href="#contato">Contact</a>
-    </nav>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
-      <span class="theme-toggle__icon" aria-hidden="true"></span>
-      <span id="theme-toggle-text">Light mode</span>
-    </button>
+    <div class="shell topbar__inner">
+      <a class="brand" href="#home" aria-label="F404X home"><span aria-hidden="true">[</span>F404X<span aria-hidden="true">]</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#projetos">Projects</a>
+        <a href="#sobre">About</a>
+        <a href="#habilidades">Toolkit</a>
+        <a href="#contato">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
+        <span aria-hidden="true">◐</span> <span id="theme-toggle-text">Light mode</span>
+      </button>
+    </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="shell">
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <canvas id="cursor-canvas" aria-hidden="true"></canvas>
-      <div class="hero__plate hero__plate--with-photo">
-        <div class="hero__intro">
-          <h1 id="hero-title" class="hero__handle">F404X</h1>
-          <p class="hero__name">Enzo dos Santos</p>
-          <p class="hero__role">Computer Science student and InfoSec enthusiast.</p>
-          <a class="hero__cta" href="#projetos">Explore my projects <span aria-hidden="true">↗</span></a>
+      <div class="hero__intro">
+        <p class="eyebrow"><span class="marker"></span> Portfolio / F404X</p>
+        <h1 id="hero-title">Enzo dos<br><span>Santos.</span></h1>
+        <p class="hero__role">Computer Science student &amp; IT assistant</p>
+        <p class="hero__summary">I build automation tools and explore how software, networks, and security fit together.</p>
+        <div class="actions">
+          <a class="button button--primary" href="#projetos">Explore projects <span aria-hidden="true">↓</span></a>
+          <a class="button" href="https://github.com/F404X">GitHub <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
         </div>
-        <figure class="hero__portrait">
+      </div>
+      <figure class="portrait">
+        <div class="portrait__frame">
           <img src="assets/f404x-portrait.webp" alt="Black-and-white side-profile portrait of Enzo dos Santos" width="420" height="420" fetchpriority="high" decoding="async">
-        </figure>
-      </div>
-    </section>
-
-    <section id="sobre" class="section" aria-labelledby="about-title">
-      <h2 id="about-title">About me</h2>
-      <p>I'm Enzo, also known as F404X, a Computer Science student with a strong interest in information security, automation, and software development.</p>
-      <p>I enjoy exploring how systems work, building useful tools, and learning more about Linux, networking, and technology in general. This portfolio is a place to share some of the projects I've worked on.</p>
-    </section>
-
-    <section id="habilidades" class="section" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills</h2>
-      <p class="skills__intro">Technologies, tools, and areas I've worked with or explored through personal projects and hands-on learning.</p>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Frontend</h3>
-          <ul class="chips" aria-label="Frontend technologies">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Next.js</li>
-            <li>Canvas API</li>
-          </ul>
         </div>
-        <div class="skill-group">
-          <h3>Backend &amp; Databases</h3>
-          <ul class="chips" aria-label="Backend and database technologies">
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>REST APIs</li>
-            <li>Python</li>
-            <li>MySQL</li>
-            <li>SQLite</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Systems &amp; Cloud</h3>
-          <ul class="chips" aria-label="Systems and cloud technologies">
-            <li>Linux</li>
-            <li>Bash</li>
-            <li>Git &amp; GitHub</li>
-            <li>Cloudflare</li>
-            <li>Cloudflare Tunnel</li>
-            <li>Raspberry Pi</li>
-            <li>Pi-hole</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Networking &amp; Security</h3>
-          <ul class="chips" aria-label="Networking and security tools">
-            <li>Networking</li>
-            <li>DNS</li>
-            <li>Information Security</li>
-            <li>Web Security</li>
-            <li>Wireshark</li>
-            <li>Burp Suite</li>
-          </ul>
-        </div>
-        <div class="skill-group skill-group--wide">
-          <h3>Development &amp; Automation</h3>
-          <ul class="chips" aria-label="Additional development tools">
-            <li>C#</li>
-            <li>Unity</li>
-            <li>Automation</li>
-          </ul>
-        </div>
-      </div>
+        <figcaption><span>FIG. 01</span><span>ENZO DOS SANTOS / F404X</span></figcaption>
+      </figure>
     </section>
 
     <section id="projetos" class="section" aria-labelledby="projects-title">
+      <p class="eyebrow">01 / Selected work</p>
       <h2 id="projects-title">Projects</h2>
       <div class="projects">
         <article class="project">
-          <h3>Lune Bot</h3>
-          <p>A JavaScript-based WhatsApp bot launched in 2019, with group administration, entertainment, mini-games, utilities, and subscription features.</p>
-          <p class="project__tags">JavaScript · Node.js · Automation · WhatsApp</p>
-          <a class="project__link" href="https://github.com/luizbizzio/lune-bot" target="_blank" rel="noopener noreferrer" aria-label="View Lune Bot on GitHub (opens in a new tab)">View on GitHub <span aria-hidden="true">↗</span></a>
+          <div class="project__art" aria-hidden="true">
+            <span class="project__index">01 / STATIC ANALYSIS</span>
+            <div class="code-sample">
+              <span><b>01</b> Inspect source</span>
+              <span><b>02</b> Flag sensitive operations</span>
+              <span><b>03</b> Review relevant lines</span>
+            </div>
+          </div>
+          <div class="project__body">
+            <h3>Windhawk Inspector</h3>
+            <p>A browser-based analyzer that flags potentially sensitive operations in Windhawk mods and points to the relevant lines for review. Analysis runs on the source code itself.</p>
+            <ul class="chips" aria-label="Technologies and topics"><li>Static analysis</li><li>C++</li><li>Web security</li></ul>
+            <a class="text-link" href="https://github.com/luizbizzio/windhawk-inspector" aria-label="View Windhawk Inspector on GitHub">View repository <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+          </div>
         </article>
         <article class="project">
-          <h3>Windhawk Inspector</h3>
-          <p>An open-source, browser-based analyzer for Windhawk mod source code. It highlights potentially sensitive operations with references to relevant source lines, without compiling or running the code.</p>
-          <p class="project__tags">C++ · Static Analysis · Security · Open Source</p>
-          <a class="project__link" href="https://github.com/luizbizzio/windhawk-inspector" target="_blank" rel="noopener noreferrer" aria-label="View Windhawk Inspector on GitHub (opens in a new tab)">View on GitHub <span aria-hidden="true">↗</span></a>
+          <div class="project__art" aria-hidden="true">
+            <span class="project__index">02 / CHAT AUTOMATION</span>
+            <div class="bot-flow"><span>Message</span><b>→</b><span>Command</span><b>→</b><span>Reply</span></div>
+          </div>
+          <div class="project__body">
+            <h3>Lune Bot</h3>
+            <p>A WhatsApp bot launched in 2019 that brings group administration, utilities, and mini-games into chat commands.</p>
+            <ul class="chips" aria-label="Technologies and topics"><li>Node.js</li><li>JavaScript</li><li>WhatsApp</li></ul>
+            <a class="text-link" href="https://github.com/luizbizzio/lune-bot" aria-label="View Lune Bot on GitHub">View repository <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="contato" class="section" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <p>Want to connect or talk about a project? Click my email to copy it, or find me on LinkedIn and GitHub.</p>
-      <ul class="links">
-        <li>
-          <button id="copy-email" class="email-copy" type="button" title="Copy email address" aria-label="Copy email address to clipboard">
-            <span id="email-display">Copy email</span>
-            <span class="email-copy__hint" aria-hidden="true">⧉</span>
-          </button>
-        </li>
-        <li><a href="https://www.linkedin.com/in/santosenzo/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
-        <li><a href="https://github.com/F404X" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
-      </ul>
-      <span id="email-feedback" class="email-feedback" role="status" aria-live="polite"></span>
-      <p class="contact__hub">Looking for more of my links? Visit my personal link hub: <a href="https://httpc.f404x.net/" target="_blank" rel="noopener noreferrer">httpc.f404x.net <span aria-hidden="true">↗</span></a></p>
+    <section id="sobre" class="section about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">02 / Background</p>
+        <h2 id="about-title">About me</h2>
+      </div>
+      <div class="about__copy">
+        <p>I’m Enzo, also known as F404X. I study Computer Science and work as an assistant in a Brazilian registry office, where my role also includes IT support.</p>
+        <p>Automation is the area I’m most drawn to. Outside work, I use personal projects to learn about Linux, DNS, and information security. One example is my Raspberry Pi setup with Pi-hole and Unbound, where I experimented with DNS filtering and recursive resolution.</p>
+      </div>
+    </section>
+
+    <section id="habilidades" class="section" aria-labelledby="skills-title">
+      <p class="eyebrow">03 / Technologies</p>
+      <h2 id="skills-title">Toolkit</h2>
+      <p class="section__intro">Tools and technologies I’ve used or explored in personal projects.</p>
+      <div class="toolkit">
+        <article class="toolkit__group">
+          <h3>Web development</h3>
+          <ul class="chips"><li>HTML &amp; CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Canvas API</li></ul>
+        </article>
+        <article class="toolkit__group">
+          <h3>Backend &amp; automation</h3>
+          <ul class="chips"><li>Node.js</li><li>Express</li><li>REST APIs</li><li>Python</li><li>MySQL</li><li>SQLite</li></ul>
+        </article>
+        <article class="toolkit__group">
+          <h3>Infrastructure &amp; security</h3>
+          <ul class="chips"><li>Linux</li><li>Bash</li><li>Raspberry Pi</li><li>Cloudflare Tunnel</li><li>DNS</li><li>Pi-hole</li><li>Wireshark</li><li>Burp Suite</li></ul>
+        </article>
+        <article class="toolkit__group">
+          <h3>Version control &amp; games</h3>
+          <ul class="chips"><li>Git</li><li>GitHub</li><li>C#</li><li>Unity</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact" aria-labelledby="contact-title">
+      <p class="eyebrow">04 / Contact</p>
+      <h2 id="contact-title">Let’s talk.</h2>
+      <p class="section__intro">For project ideas, collaboration, or a conversation about technology.</p>
+      <div class="actions">
+        <button id="copy-email" class="button button--primary" type="button" aria-label="Copy email address to clipboard" hidden>
+          <span id="email-display">Copy email</span><svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="6" height="6" rx="1"/><path d="M7 2H3a1 1 0 0 0-1 1v4"/></svg>
+        </button>
+        <a class="button" href="https://www.linkedin.com/in/santosenzo/">LinkedIn <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+        <a class="button" href="https://github.com/F404X">GitHub <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+        <a class="button" href="https://httpc.f404x.net/">Link hub <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+      </div>
+      <p id="email-feedback" class="email-feedback" role="status"></p>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year">2026</span> Enzo dos Santos (F404X)</p>
+  <footer class="shell footer">
+    <p>© <span id="year">2026</span> Enzo dos Santos / F404X</p>
+    <a class="text-link" href="#home">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
 </body>
 </html>

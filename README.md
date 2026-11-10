@@ -25,6 +25,6 @@ No build process, package installation, or environment variables are required. C
 
 - Edit `index.html` for the biography, project cards, and contact links.
 - Edit `style.css` for layout, colors, and typography.
-- Edit `script.js` for theme switching and the lightweight canvas effect.
+- Edit `script.js` for theme switching and email copying.
 
 The page uses Google Fonts. If you prefer no third-party font requests, remove the font stylesheet in `index.html`; the CSS includes system-font fallbacks.
