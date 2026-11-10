@@ -1,0 +1,48 @@
+name: Refresh asset cache fingerprints
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "style.css"
+      - "script.js"
+      - "_build/cache-bust.mjs"
+      - ".github/workflows/cache-bust.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: cache-bust-main
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Generate fingerprints
+        run: node _build/cache-bust.mjs
+      - name: Commit changed URLs and trigger Pages rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No asset fingerprint changes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "chore: update asset cache fingerprints"
+          git push origin HEAD:main
+          # A push using GITHUB_TOKEN does not trigger GitHub Pages automatically.
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
