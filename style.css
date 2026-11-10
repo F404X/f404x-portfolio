@@ -10,6 +10,7 @@
   --button: #f5da54;
   --ink: #19170e;
   --grid: #f5da541a;
+  --particle: 245, 218, 84;
   --sans: "IBM Plex Sans", system-ui, sans-serif;
   --display: "Space Grotesk", system-ui, sans-serif;
   --mono: ui-monospace, "Cascadia Code", monospace;
@@ -25,6 +26,7 @@
   --line: #bcb5a1;
   --accent: #685000;
   --grid: #68500020;
+  --particle: 104, 80, 0;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -99,12 +101,30 @@ img { display: block; max-width: 100%; height: auto; }
 .theme-toggle span:first-child { color: var(--accent); }
 
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: clamp(2rem, 7vw, 6.5rem);
   align-items: center;
   padding-block: clamp(3rem, 9vw, 7rem);
 }
+
+/* Ambient particles sit behind the hero content and never intercept clicks. */
+#cursor-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.hero__intro, .hero .portrait {
+  position: relative;
+  z-index: 1;
+}
+
 .eyebrow, figcaption, .project__index {
   font: 600 .74rem/1.5 var(--mono);
   letter-spacing: .09em;
@@ -321,6 +341,7 @@ figcaption span:last-child { color: var(--muted); }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  #cursor-canvas { display: none; }
   .project, .toolkit__group, .email-copy__default, .email-copy__state {
     transition: none;
   }

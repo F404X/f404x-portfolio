@@ -12,6 +12,10 @@ python -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+## Interactive hero
+
+The floating yellow particles in the home section use an accessible, pointer-transparent `canvas`. Nearby particles are attracted to mouse or pen movement without blocking links. On touch screens they float without tracking scroll gestures; `prefers-reduced-motion` disables the animation. Animation pauses when the hero is not visible or the tab is in the background.
+
 ## Automatic cache busting (GitHub Pages)
 
 GitHub Pages publishes this repository from `main`. The additional GitHub Actions workflow computes a separate, content-based version for `style.css` and `script.js` when those files change, updates the `?v=...` references in `index.html`, and requests a Pages rebuild. File names stay unchanged; unchanged assets keep their version.
