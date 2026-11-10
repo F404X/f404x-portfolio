@@ -33,9 +33,12 @@ document.getElementById("year").textContent = new Date().getFullYear();
 // in HTML or JS source. This only deters basic static email harvesters.
 const emailButton = document.getElementById("copy-email");
 const emailDisplay = document.getElementById("email-display");
+const emailState = document.getElementById("email-copy-state");
 const emailFeedback = document.getElementById("email-feedback");
 
-if (emailButton && emailDisplay && emailFeedback) {
+if (emailButton && emailDisplay && emailState && emailFeedback) {
+  let resetFeedbackTimer;
+  let latestCopyRequest = 0;
   const mailbox = String.fromCharCode(99, 111, 110, 116, 97, 99, 116);
   const domain = String.fromCharCode(102, 52, 48, 52, 120, 46, 110, 101, 116);
   const email = mailbox + "@" + domain;
@@ -44,6 +47,11 @@ if (emailButton && emailDisplay && emailFeedback) {
   emailButton.hidden = false;
 
   emailButton.addEventListener("click", async () => {
+    const request = ++latestCopyRequest;
+    clearTimeout(resetFeedbackTimer);
+    emailButton.classList.remove("is-success", "is-error");
+    emailFeedback.textContent = "";
+
     let copied = false;
     if (navigator.clipboard?.writeText) {
       try {
@@ -68,8 +76,19 @@ if (emailButton && emailDisplay && emailFeedback) {
       }
     }
 
+    // Ignore stale clipboard results if the user clicked again meanwhile.
+    if (request !== latestCopyRequest) return;
+
+    emailState.textContent = copied ? "✓ Copiado!" : "Falha ao copiar";
+    emailButton.classList.add(copied ? "is-success" : "is-error");
     emailFeedback.textContent = copied
       ? "Email copied to clipboard."
       : "Automatic copy is unavailable. Please copy this address manually: " + email;
+
+    resetFeedbackTimer = setTimeout(() => {
+      if (request !== latestCopyRequest) return;
+      emailButton.classList.remove("is-success", "is-error");
+      emailState.textContent = "";
+    }, 2000);
   });
 }
