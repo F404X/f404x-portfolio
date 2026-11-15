@@ -1,42 +1,29 @@
 # F404X Portfolio
 
-Personal portfolio of Enzo dos Santos (F404X), built with plain HTML, CSS, and JavaScript.
+The personal portfolio of **Enzo dos Santos (F404X)**, a Computer Science student who works with real estate registry operations and IT support in Brazil. The site brings together selected projects, my technical background, and ways to get in touch.
 
-## Local preview
+## Selected projects
 
-Open `index.html` in a browser, or serve this folder with a local static web server, for example:
+| Project | What it does |
+| --- | --- |
+| [Windhawk Inspector](https://github.com/luizbizzio/windhawk-inspector) | Reviews Windhawk mod source code in the browser and points to lines that contain potentially sensitive operations. |
+| [Lune Bot](https://github.com/luizbizzio/lune-bot) | Automates WhatsApp group administration and provides utilities and mini-games through chat commands. |
+| [A404DC](https://github.com/F404X/aidc-generator) | Generates QR codes and barcodes in the browser, with live previews, image exports, and batch generation. |
 
-```bash
+The **About** and **Toolkit** sections cover my background in web development and automation, including JavaScript, React, Node.js, and WebSockets. In **Contact**, you can copy my email address or use the links below.
+
+[LinkedIn](https://www.linkedin.com/in/santosenzo/) · [GitHub](https://github.com/F404X) · [Link hub](https://httpc.f404x.net/)
+
+## Run the site locally
+
+The portfolio is a static site built with HTML, CSS, and JavaScript. Open `index.html` in a browser or, with Python 3 installed, run the following from the repository root.
+
+```sh
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
+Open [localhost:8000](http://localhost:8000). The site includes a light and dark theme and an interactive particle background that respects the browser’s reduced motion setting.
 
-## Interactive hero
+## Hosting
 
-The floating yellow particles in the home section use an accessible, pointer-transparent `canvas`. Nearby particles are attracted to mouse or pen movement without blocking links. On touch screens they float without tracking scroll gestures; `prefers-reduced-motion` disables the animation. Animation pauses when the hero is not visible or the tab is in the background.
-
-## Automatic cache busting (GitHub Pages)
-
-GitHub Pages publishes this repository from `main`. The additional GitHub Actions workflow computes a separate, content-based version for `style.css` and `script.js` when those files change, updates the `?v=...` references in `index.html`, and requests a Pages rebuild. File names stay unchanged; unchanged assets keep their version.
-
-You can also refresh the references locally with `node _build/cache-bust.mjs`. No packages or framework are required. The script is idempotent. The site's normal HTML/CSS/JS can still be previewed directly by opening `index.html`.
-
-GitHub Pages can cache HTML for a short time, so already-open tabs may need a reload to obtain the new references. The `_headers` revalidation rules apply if the project is also hosted on Cloudflare Pages; GitHub Pages does not interpret `_headers`.
-
-## Deploy to Cloudflare Pages
-
-1. In **Workers & Pages**, choose **Create application → Pages → Import an existing Git repository**.
-2. Select `F404X/f404x-portfolio` and the production branch `main`.
-3. Choose **None** for the framework preset, **`exit 0`** for the build command (or leave it blank), and **`.`** for the build output directory. The site files are in the repository root.
-4. Deploy. Cloudflare Pages will publish the site at a `*.pages.dev` address and deploy subsequent pushes to `main` automatically.
-
-For Cloudflare Pages, no additional build process, package installation, or environment variables are required. Cloudflare Pages applies the security and revalidation headers in `_headers` to static responses. GitHub Actions maintains the cache fingerprints in the source so both hosts can serve the updated links.
-
-## Customizing
-
-- Edit `index.html` for the biography, project cards, and contact links.
-- Edit `style.css` for layout, colors, and typography.
-- Edit `script.js` for theme switching and email copying.
-
-The page uses Google Fonts. If you prefer no third-party font requests, remove the font stylesheet in `index.html`; the CSS includes system-font fallbacks.
+GitHub Pages publishes from `main`. The repository workflow updates the CSS and JavaScript version parameters when the assets change. To serve the same files on Cloudflare Pages, use the repository root as the output directory and leave the build command blank. Cloudflare Pages reads the response rules in `_headers`.
