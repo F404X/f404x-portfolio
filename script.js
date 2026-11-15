@@ -20,7 +20,7 @@ function applyTheme(theme) {
   const nextTheme = theme === "dark" ? "light" : "dark";
   toggleText.textContent = translate(nextTheme);
   toggleButton.setAttribute("aria-label", translate(nextTheme));
-  themeMeta.setAttribute("content", theme === "dark" ? "#10110f" : "#f8f5ec");
+  themeMeta.setAttribute("content", theme === "dark" ? "#0b1018" : "#f3f6fb");
 }
 
 applyTheme(readSavedTheme() || "dark");
