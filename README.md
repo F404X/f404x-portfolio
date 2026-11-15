@@ -9,7 +9,7 @@ The personal portfolio of **Enzo dos Santos (F404X)**, a Computer Science studen
 | [Windhawk Inspector](https://github.com/luizbizzio/windhawk-inspector) | Reviews Windhawk mod source code in the browser and points to lines that contain potentially sensitive operations. |
 | [Lune Bot](https://github.com/luizbizzio/lune-bot) | Automates WhatsApp group administration and provides utilities and mini-games through chat commands. |
 | [A404DC](https://github.com/F404X/aidc-generator) | Generates QR codes and barcodes in the browser, with live previews, image exports, and batch generation. |
-| [GeoDetective](https://github.com/F404X/geodetective) ([play online](https://f404x.github.io/geodetective/)) | A multilingual geography deduction game with daily and free-play cases, interactive map guesses, adaptive evidence and investigation reports. |
+| [Cartigma](https://github.com/F404X/cartigma) ([play online](https://f404x.github.io/cartigma/)) | A multilingual geography deduction game with daily and free-play cases, interactive map guesses, adaptive evidence and investigation reports. |
 
 The **About** and **Toolkit** sections cover my background in web development and automation, including JavaScript, React, Node.js, and WebSockets. In **Contact**, you can copy my email address or use the links below.
 
