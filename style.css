@@ -1,16 +1,17 @@
 :root {
   color-scheme: dark;
-  --bg: #10110f;
-  --panel: #181a16;
-  --art: #12140f;
-  --text: #f4f2e9;
-  --muted: #b7b8ab;
-  --line: #3b3d33;
-  --accent: #f5da54;
-  --button: #f5da54;
-  --ink: #19170e;
-  --grid: #f5da541a;
-  --particle: 245, 218, 84;
+  /* Match Cartigma's blue-black surfaces and warm golden accent. */
+  --bg: #0b1018;
+  --panel: #111827;
+  --art: #1a2434;
+  --text: #ebeff7;
+  --muted: #a5b2c5;
+  --line: #2a374b;
+  --accent: #f6ca47;
+  --button: #f6ca47;
+  --ink: #242014;
+  --grid: #f6ca4717;
+  --particle: 246, 202, 71;
   --sans: "IBM Plex Sans", system-ui, sans-serif;
   --display: "Space Grotesk", system-ui, sans-serif;
   --mono: ui-monospace, "Cascadia Code", monospace;
@@ -18,15 +19,17 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f8f5ec;
-  --panel: #fffdf7;
-  --art: #eee8d6;
-  --text: #232217;
-  --muted: #565449;
-  --line: #bcb5a1;
-  --accent: #685000;
-  --grid: #68500020;
-  --particle: 104, 80, 0;
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --art: #f5f8fc;
+  --text: #172338;
+  --muted: #5e7087;
+  --line: #d5dfec;
+  --accent: #855900;
+  --button: #f5c84d;
+  --ink: #252015;
+  --grid: #85590018;
+  --particle: 133, 89, 0;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
