@@ -19,7 +19,7 @@ for (const file of ["style.css", "translations.js", "script.js"]) {
     .slice(0, 12);
 
   const escapedName = file.replaceAll(".", "\\.");
-  const pattern = new RegExp(`((?:href|src)=["'])${escapedName}(?:\\?v=[a-f0-9]{12})?(["'])`, "g");
+  const pattern = new RegExp(`((?:href|src)=["'])${escapedName}(?:\\?v=[A-Za-z0-9._~-]+)?(["'])`, "g");
   let matches = 0;
   html = html.replace(pattern, (_match, start, end) => {
     matches += 1;
