@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const htmlPath = resolve(root, "index.html");
 let html = await readFile(htmlPath, "utf8");
 
-for (const file of ["style.css", "script.js"]) {
+for (const file of ["style.css", "translations.js", "script.js"]) {
   const data = await readFile(resolve(root, file));
   // Git-compatible blob fingerprint: changes only when this file changes.
   const version = createHash("sha1")

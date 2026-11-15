@@ -6,6 +6,7 @@ on:
     paths:
       - "style.css"
       - "script.js"
+      - "translations.js"
       - "_build/cache-bust.mjs"
       - ".github/workflows/cache-bust.yml"
   workflow_dispatch:

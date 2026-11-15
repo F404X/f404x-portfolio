@@ -14,23 +14,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=0f799d0bf242">
-  <script src="script.js?v=b516ee6a7082" defer></script>
+  <link rel="stylesheet" href="style.css?v=16bb011bc01e">
+  <script src="translations.js?v=83c09077454c" defer></script>
+  <script src="script.js?v=92842067d417" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
   <header class="topbar">
     <div class="shell topbar__inner">
       <a class="brand" href="#home" aria-label="F404X home"><span aria-hidden="true">[</span>F404X<span aria-hidden="true">]</span></a>
       <nav aria-label="Main navigation">
-        <a href="#projetos">Projects</a>
-        <a href="#sobre">About</a>
-        <a href="#habilidades">Toolkit</a>
-        <a href="#contato">Contact</a>
+        <a href="#projetos"><span data-i18n="projects">Projects</span></a>
+        <a href="#sobre"><span data-i18n="about">About</span></a>
+        <a href="#habilidades"><span data-i18n="tools">Toolkit</span></a>
+        <a href="#contato"><span data-i18n="contact">Contact</span></a>
       </nav>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
-        <span aria-hidden="true">◐</span> <span id="theme-toggle-text">Light mode</span>
-      </button>
+      <div class="topbar__controls">
+        <div class="language-picker" id="language-picker" hidden>
+          <button class="theme-toggle language-trigger" id="language-trigger" type="button" aria-expanded="false" aria-controls="language-panel"><span aria-hidden="true">◎</span><span id="language-current"></span><span aria-hidden="true">⌄</span></button>
+          <div class="language-panel" id="language-panel" hidden>
+            <input type="search" id="language-search" autocomplete="off">
+            <div class="language-options" id="language-options"></div>
+            <p id="language-empty" role="status" hidden></p>
+          </div>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">
+          <span aria-hidden="true">◐</span> <span id="theme-toggle-text">Light mode</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -38,12 +49,12 @@
     <section id="home" class="hero" aria-labelledby="hero-title">
       <canvas id="cursor-canvas" aria-hidden="true"></canvas>
       <div class="hero__intro">
-        <p class="eyebrow"><span class="marker"></span> Portfolio / F404X</p>
+        <p class="eyebrow"><span class="marker"></span> <span data-i18n="portfolio">Portfolio / F404X</span></p>
         <h1 id="hero-title">Enzo dos<br><span>Santos.</span></h1>
-        <p class="hero__role">Computer Science student, developer &amp; IT assistant</p>
-        <p class="hero__summary">I build web interfaces, APIs, and automation tools, combining hands-on development with my Computer Science studies and IT work at a registry office.</p>
+        <p class="hero__role"><span data-i18n="role">Computer Science student, developer &amp; IT assistant</span></p>
+        <p class="hero__summary"><span data-i18n="intro">I build web interfaces, APIs, and automation tools, combining hands-on development with my Computer Science studies and IT work at a registry office.</span></p>
         <div class="actions">
-          <a class="button button--primary" href="#projetos">Explore projects <span aria-hidden="true">↓</span></a>
+          <a class="button button--primary" href="#projetos"><span data-i18n="explore">Explore projects</span> <span aria-hidden="true">↓</span></a>
           <a class="button" href="https://github.com/F404X">GitHub <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
         </div>
       </div>
@@ -56,68 +67,67 @@
     </section>
 
     <section id="projetos" class="section" aria-labelledby="projects-title">
-      <p class="eyebrow">01 / Selected work</p>
-      <h2 id="projects-title">Projects</h2>
+      <p class="eyebrow"><span data-i18n="work">01 / Selected work</span></p>
+      <h2 id="projects-title"><span data-i18n="projects">Projects</span></h2>
       <div class="projects">
         <article class="project">
           <div class="project__art" aria-hidden="true">
-            <span class="project__index">01 / STATIC ANALYSIS</span>
+            <span class="project__index"><span data-i18n="staticAnalysis">01 / STATIC ANALYSIS</span></span>
             <div class="code-sample">
-              <span><b>01</b> Inspect source</span>
-              <span><b>02</b> Flag sensitive operations</span>
-              <span><b>03</b> Review relevant lines</span>
+              <span><b>01</b> <span data-i18n="inspect">Inspect source</span></span>
+              <span><b>02</b> <span data-i18n="flagOps">Flag sensitive operations</span></span>
+              <span><b>03</b> <span data-i18n="review">Review relevant lines</span></span>
             </div>
           </div>
           <div class="project__body">
             <h3>Windhawk Inspector</h3>
-            <p>A browser-based analyzer that flags potentially sensitive operations in Windhawk mods and points to the relevant lines for review. Analysis runs on the source code itself.</p>
-            <ul class="chips" aria-label="Technologies and topics"><li>Static analysis</li><li>C++</li><li>Web security</li></ul>
-            <a class="text-link" href="https://github.com/luizbizzio/windhawk-inspector" aria-label="View Windhawk Inspector on GitHub">View repository <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+            <p><span data-i18n="wind">A browser-based analyzer that flags potentially sensitive operations in Windhawk mods and points to the relevant lines for review. Analysis runs on the source code itself.</span></p>
+            <ul class="chips" aria-label="Technologies and topics"><li><span data-i18n="staticTag">Static analysis</span></li><li>C++</li><li><span data-i18n="securityTag">Web security</span></li></ul>
+            <div class="project__actions"><a class="button project__visit" href="https://windhawk-inspector.luizbizzio.com/"><span data-i18n="open">Open project</span></a><a class="text-link" href="https://github.com/luizbizzio/windhawk-inspector" aria-label="View Windhawk Inspector on GitHub"><span data-i18n="repo">View repository</span> <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
           </div>
         </article>
         <article class="project">
           <div class="project__art" aria-hidden="true">
-            <span class="project__index">02 / CHAT AUTOMATION</span>
-            <div class="bot-flow"><span>Message</span><b>→</b><span>Command</span><b>→</b><span>Reply</span></div>
+            <span class="project__index"><span data-i18n="chatAutomation">02 / CHAT AUTOMATION</span></span>
+            <div class="bot-flow"><span><span data-i18n="message">Message</span></span><b>→</b><span><span data-i18n="command">Command</span></span><b>→</b><span><span data-i18n="reply">Reply</span></span></div>
           </div>
           <div class="project__body">
             <h3>Lune Bot</h3>
-            <p>A WhatsApp bot launched in 2019 that brings group administration, utilities, and mini-games into chat commands.</p>
+            <p><span data-i18n="lune">A WhatsApp bot launched in 2019 that brings group administration, utilities, and mini-games into chat commands.</span></p>
             <ul class="chips" aria-label="Technologies and topics"><li>Node.js</li><li>JavaScript</li><li>WhatsApp</li></ul>
-            <a class="text-link" href="https://github.com/luizbizzio/lune-bot" aria-label="View Lune Bot on GitHub">View repository <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+            <div class="project__actions"><a class="button project__visit" href="https://github.com/luizbizzio/lune-bot#readme"><span data-i18n="history">Project documentation</span></a><a class="text-link" href="https://github.com/luizbizzio/lune-bot" aria-label="View Lune Bot on GitHub"><span data-i18n="repo">View repository</span> <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
           </div>
         </article>
         <article class="project">
           <div class="project__art" aria-hidden="true">
-            <span class="project__index">03 / CODE GENERATION</span>
+            <span class="project__index"><span data-i18n="generation">03 / CODE GENERATION</span></span>
             <div class="code-sample">
-              <span><b>01</b> Choose a symbology</span>
-              <span><b>02</b> Customize QR or barcode</span>
-              <span><b>03</b> Preview and export</span>
+              <span><b>01</b> <span data-i18n="choose">Choose a symbology</span></span>
+              <span><b>02</b> <span data-i18n="customize">Customize QR or barcode</span></span>
+              <span><b>03</b> <span data-i18n="preview">Preview and export</span></span>
             </div>
           </div>
           <div class="project__body">
             <h3>A404DC</h3>
-            <p>A browser-based barcode and QR code generator supporting 100+ symbologies. Customize colors and QR logos, preview codes, and export images or generate multiple codes in a batch, with encoding done locally.</p>
-            <ul class="chips" aria-label="Technologies and topics"><li>JavaScript</li><li>QR &amp; barcodes</li><li>SVG</li></ul>
-            <a class="text-link" href="https://github.com/F404X/aidc-generator" aria-label="View A404DC on GitHub">View repository <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+            <p><span data-i18n="aidc">A browser-based barcode and QR code generator supporting 100+ symbologies. Customize colors and QR logos, preview codes, and export images or generate multiple codes in a batch, with encoding done locally.</span></p>
+            <ul class="chips" aria-label="Technologies and topics"><li>JavaScript</li><li><span data-i18n="barcodeTag">QR &amp; barcodes</span></li><li>SVG</li></ul>
+            <div class="project__actions"><a class="button project__visit" href="https://d0b3427e.aidc-generator.pages.dev/"><span data-i18n="open">Open project</span></a><a class="text-link" href="https://github.com/F404X/aidc-generator" aria-label="View A404DC on GitHub"><span data-i18n="repo">View repository</span> <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
           </div>
         </article>
         <article class="project">
           <div class="project__art" aria-hidden="true">
-            <span class="project__index">04 / GEOGRAPHIC DEDUCTION</span>
+            <span class="project__index"><span data-i18n="geoIndex">04 / GEOGRAPHIC DEDUCTION</span></span>
             <div class="code-sample">
-              <span><b>01</b> Examine the evidence</span>
-              <span><b>02</b> Mark a location on the map</span>
-              <span><b>03</b> Close the case</span>
+              <span><b>01</b> <span data-i18n="geoEvidence">Examine the evidence</span></span>
+              <span><b>02</b> <span data-i18n="geoMap">Mark a location on the map</span></span>
+              <span><b>03</b> <span data-i18n="geoCase">Close the case</span></span>
             </div>
           </div>
           <div class="project__body">
             <h3>GeoDetective</h3>
-            <p>A browser-based geography deduction game with daily and unlimited cases. Use geographic clues, an interactive map and distance feedback to locate a hidden city. Includes two difficulty levels, multilingual support and a detective-style case report.</p>
-            <ul class="chips" aria-label="Technologies and topics"><li>JavaScript</li><li>MapLibre &amp; Leaflet</li><li>Geography</li></ul>
-            <a class="text-link" href="https://github.com/F404X/geodetective" aria-label="View GeoDetective on GitHub">View repository <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
-            <a class="project__demo" href="https://f404x.github.io/geodetective/" target="_blank" rel="noopener noreferrer" aria-label="Play GeoDetective online">Play live <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+            <p><span data-i18n="geo">A geography game with daily and unlimited cases. Use clues and distance feedback to locate a hidden city on the map.</span></p>
+            <ul class="chips" aria-label="Technologies and topics"><li>JavaScript</li><li>MapLibre &amp; Leaflet</li><li><span data-i18n="geoTag">Geography</span></li></ul>
+            <div class="project__actions"><a class="button project__visit" href="https://f404x.github.io/geodetective/" target="_blank" rel="noopener noreferrer"><span data-i18n="open">Open project</span> <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a class="text-link" href="https://github.com/F404X/geodetective" aria-label="View GeoDetective on GitHub"><span data-i18n="repo">View repository</span> <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
           </div>
         </article>
       </div>
@@ -125,43 +135,43 @@
 
     <section id="sobre" class="section about" aria-labelledby="about-title">
       <div>
-        <p class="eyebrow">02 / Background</p>
-        <h2 id="about-title">About me</h2>
+        <p class="eyebrow"><span data-i18n="background">02 / Background</span></p>
+        <h2 id="about-title"><span data-i18n="bioTitle">About me</span></h2>
       </div>
       <div class="about__copy">
-        <p>I’m Enzo dos Santos, also known as F404X. I study Computer Science and work at a Brazilian real estate registry office, where I handle registry routines and assist with IT-related tasks.</p>
-        <p>I learn best by building things. My interests connect web development, automation, networking, and information security: from JavaScript interfaces and Node.js APIs to real-time features with React and WebSockets. I also explore databases, data analysis, and interactive projects using Canvas and Unity. I enjoy understanding how systems work and finding practical ways to improve them.</p>
+        <p><span data-i18n="bio">I’m Enzo dos Santos, also known as F404X. I study Computer Science and work at a Brazilian real estate registry office, where I handle registry routines and assist with IT-related tasks.</span></p>
+        <p><span data-i18n="interests">I learn best by building things. My interests connect web development, automation, networking, and information security: from JavaScript interfaces and Node.js APIs to real-time features with React and WebSockets. I also explore databases, data analysis, and interactive projects using Canvas and Unity. I enjoy understanding how systems work and finding practical ways to improve them.</span></p>
       </div>
     </section>
 
     <section id="habilidades" class="section" aria-labelledby="skills-title">
-      <p class="eyebrow">03 / Technologies</p>
-      <h2 id="skills-title">Toolkit</h2>
-      <p class="section__intro">Technologies I use or explore across web apps, automation, databases, security, and interactive experiments.</p>
+      <p class="eyebrow"><span data-i18n="tech">03 / Technologies</span></p>
+      <h2 id="skills-title"><span data-i18n="tools">Toolkit</span></h2>
+      <p class="section__intro"><span data-i18n="toolIntro">Technologies I use or explore across web apps, automation, databases, security, and interactive experiments.</span></p>
       <div class="toolkit">
         <article class="toolkit__group">
-          <h3>Web &amp; interfaces</h3>
+          <h3><span data-i18n="web">Web &amp; interfaces</span></h3>
           <ul class="chips"><li>HTML &amp; CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Canvas API</li></ul>
         </article>
         <article class="toolkit__group">
-          <h3>Backend &amp; data</h3>
+          <h3><span data-i18n="backend">Backend &amp; data</span></h3>
           <ul class="chips"><li>Node.js</li><li>Express</li><li>REST APIs</li><li>WebSockets</li><li>Python</li><li>MySQL</li><li>SQLite</li></ul>
         </article>
         <article class="toolkit__group">
-          <h3>Networking &amp; security</h3>
-          <ul class="chips"><li>Networking</li><li>DNS</li><li>Wireshark</li><li>Burp Suite</li><li>Cloudflare</li></ul>
+          <h3><span data-i18n="network">Networking &amp; security</span></h3>
+          <ul class="chips"><li><span data-i18n="networkTag">Networking</span></li><li>DNS</li><li>Wireshark</li><li>Burp Suite</li><li>Cloudflare</li></ul>
         </article>
         <article class="toolkit__group">
-          <h3>Tools &amp; creative development</h3>
+          <h3><span data-i18n="creative">Tools &amp; creative development</span></h3>
           <ul class="chips"><li>Git</li><li>GitHub</li><li>C#</li><li>Unity</li></ul>
         </article>
       </div>
     </section>
 
     <section id="contato" class="section contact" aria-labelledby="contact-title">
-      <p class="eyebrow">04 / Contact</p>
-      <h2 id="contact-title">Let’s talk.</h2>
-      <p class="section__intro">For project ideas, collaboration, or a conversation about technology.</p>
+      <p class="eyebrow"><span data-i18n="contactIndex">04 / Contact</span></p>
+      <h2 id="contact-title"><span data-i18n="talk">Let’s talk.</span></h2>
+      <p class="section__intro"><span data-i18n="contactIntro">For project ideas, collaboration, or a conversation about technology.</span></p>
       <div class="actions">
         <button id="copy-email" class="button button--primary" type="button" aria-label="Copy email address to clipboard" hidden>
           <span class="email-copy__default"><span id="email-display">Copy email</span><svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="6" height="6" rx="1"/><path d="M7 2H3a1 1 0 0 0-1 1v4"/></svg></span>
@@ -169,7 +179,7 @@
         </button>
         <a class="button" href="https://www.linkedin.com/in/santosenzo/">LinkedIn <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
         <a class="button" href="https://github.com/F404X">GitHub <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
-        <a class="button" href="https://httpc.f404x.net/">Link hub <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+        <a class="button" href="https://httpc.f404x.net/"><span data-i18n="hub">Link hub</span> <svg class="icon" aria-hidden="true" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
       </div>
       <p id="email-feedback" class="email-feedback" role="status"></p>
     </section>
@@ -177,7 +187,7 @@
 
   <footer class="shell footer">
     <p>© <span id="year">2026</span> Enzo dos Santos / F404X</p>
-    <a class="text-link" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    <a class="text-link" href="#home"><span data-i18n="top">Back to top</span> <span aria-hidden="true">↑</span></a>
   </footer>
 </body>
 </html>

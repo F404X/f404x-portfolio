@@ -3,6 +3,9 @@ const toggleButton = document.getElementById("theme-toggle");
 const toggleText = document.getElementById("theme-toggle-text");
 const themeMeta = document.querySelector('meta[name="theme-color"]');
 
+let portfolioLocale = "en";
+const translate = key => portfolioTranslations[portfolioLocale][key];
+
 function readSavedTheme() {
   try {
     const saved = localStorage.getItem("theme");
@@ -15,8 +18,8 @@ function readSavedTheme() {
 function applyTheme(theme) {
   root.dataset.theme = theme;
   const nextTheme = theme === "dark" ? "light" : "dark";
-  toggleText.textContent = `${nextTheme[0].toUpperCase()}${nextTheme.slice(1)} mode`;
-  toggleButton.setAttribute("aria-label", `Switch to ${nextTheme} mode`);
+  toggleText.textContent = translate(nextTheme);
+  toggleButton.setAttribute("aria-label", translate(nextTheme));
   themeMeta.setAttribute("content", theme === "dark" ? "#10110f" : "#f8f5ec");
 }
 
@@ -248,11 +251,11 @@ if (emailButton && emailDisplay && emailState && emailFeedback) {
     // Ignore stale clipboard results if the user clicked again meanwhile.
     if (request !== latestCopyRequest) return;
 
-    emailState.textContent = copied ? "✓ Copiado!" : "Falha ao copiar";
+    emailState.textContent = translate(copied ? "copied" : "copyError");
     emailButton.classList.add(copied ? "is-success" : "is-error");
     emailFeedback.textContent = copied
-      ? "Email copied to clipboard."
-      : "Automatic copy is unavailable. Please copy this address manually: " + email;
+      ? translate("copied")
+      : translate("copyError") + ". " + email;
 
     resetFeedbackTimer = setTimeout(() => {
       if (request !== latestCopyRequest) return;
@@ -261,3 +264,123 @@ if (emailButton && emailDisplay && emailState && emailFeedback) {
     }, 2000);
   });
 }
+
+const languagePicker = document.getElementById("language-picker");
+const languageTrigger = document.getElementById("language-trigger");
+const languagePanel = document.getElementById("language-panel");
+const languageSearch = document.getElementById("language-search");
+const languageOptions = document.getElementById("language-options");
+const languageEmpty = document.getElementById("language-empty");
+const currentLanguage = document.getElementById("language-current");
+const localizedNodes = document.querySelectorAll("[data-i18n]");
+
+function languageLabel([code, name, region, emoji]) {
+  const flag = document.createElement("img");
+  flag.alt = "";
+  flag.width = 23;
+  flag.height = 16;
+  flag.addEventListener("error", () => {
+    const fallback = document.createElement("span");
+    fallback.setAttribute("aria-hidden", "true");
+    fallback.textContent = emoji;
+    flag.replaceWith(fallback);
+  });
+  flag.src = "https://flagcdn.com/w40/" + region + ".png";
+  const label = document.createElement("bdi");
+  label.lang = code;
+  label.textContent = name;
+  return [flag, label];
+}
+
+function setPortfolioLocale(entry) {
+  const [code, name] = entry;
+  portfolioLocale = code;
+  root.lang = code === "pt" ? "pt-BR" : code;
+  root.dir = code === "ar" || code === "he" ? "rtl" : "ltr";
+  for (const node of localizedNodes) node.textContent = translate(node.dataset.i18n);
+  currentLanguage.replaceChildren(...languageLabel(entry));
+  languageTrigger.setAttribute("aria-label", `${translate("language")} · ${name}`);
+  languageSearch.placeholder = translate("search");
+  languageSearch.setAttribute("aria-label", translate("search"));
+  languageEmpty.textContent = translate("empty");
+  emailButton.setAttribute("aria-label", translate("copy"));
+  emailFeedback.textContent = "";
+  emailButton.classList.remove("is-success", "is-error");
+  applyTheme(root.dataset.theme);
+}
+
+function closeLanguages(restoreFocus = false) {
+  languagePanel.hidden = true;
+  languageTrigger.setAttribute("aria-expanded", "false");
+  if (restoreFocus) languageTrigger.focus();
+}
+
+const normalizeSearch = value => value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase().trim();
+
+function renderLanguages() {
+  const query = normalizeSearch(languageSearch.value);
+  const matching = portfolioLanguages.filter(entry => normalizeSearch(entry.join(" ")).includes(query));
+  languageOptions.replaceChildren(...matching.map(entry => {
+    const [code] = entry;
+    const button = document.createElement("button");
+    button.className = "language-option";
+    button.type = "button";
+    button.setAttribute("aria-pressed", String(code === portfolioLocale));
+    const badge = document.createElement("small");
+    badge.textContent = code.toUpperCase();
+    badge.setAttribute("aria-hidden", "true");
+    button.append(...languageLabel(entry), badge);
+    button.addEventListener("click", () => {
+      setPortfolioLocale(entry);
+      try { localStorage.setItem("portfolio-language", code); } catch { /* Storage can be disabled. */ }
+      closeLanguages(true);
+    });
+    return button;
+  }));
+  languageEmpty.hidden = matching.length > 0;
+}
+
+function openLanguages() {
+  languageSearch.value = "";
+  renderLanguages();
+  languagePanel.hidden = false;
+  languageTrigger.setAttribute("aria-expanded", "true");
+  languageSearch.focus();
+}
+
+languageTrigger.addEventListener("click", () => languagePanel.hidden ? openLanguages() : closeLanguages());
+languageTrigger.addEventListener("keydown", event => {
+  if (event.key === "ArrowDown" && languagePanel.hidden) {
+    event.preventDefault();
+    openLanguages();
+  }
+});
+languageSearch.addEventListener("input", renderLanguages);
+languagePanel.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    event.preventDefault();
+    closeLanguages(true);
+    return;
+  }
+  const keys = ["ArrowDown", "ArrowUp", "Home", "End"];
+  if (!keys.includes(event.key) && !(event.key === "Enter" && event.target === languageSearch)) return;
+  const options = [...languageOptions.querySelectorAll("button")];
+  if (!options.length || (event.target === languageSearch && ["Home", "End"].includes(event.key))) return;
+  event.preventDefault();
+  const index = options.indexOf(event.target);
+  const last = options.length - 1;
+  const target = event.key === "Home" ? 0 : event.key === "End" ? last :
+    event.key === "ArrowUp" ? (index <= 0 ? last : index - 1) : (index + 1) % options.length;
+  options[target].focus();
+});
+document.addEventListener("pointerdown", event => {
+  if (!languagePanel.hidden && !languagePicker.contains(event.target)) closeLanguages();
+});
+languagePicker.addEventListener("focusout", event => {
+  if (!languagePanel.hidden && event.relatedTarget && !languagePicker.contains(event.relatedTarget)) closeLanguages();
+});
+
+let savedLanguage;
+try { savedLanguage = localStorage.getItem("portfolio-language"); } catch { /* Storage can be disabled. */ }
+setPortfolioLocale(portfolioLanguages.find(([code]) => code === savedLanguage) ?? portfolioLanguages[0]);
+languagePicker.hidden = false;
