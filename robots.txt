@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://f404x.net/sitemap.xml
