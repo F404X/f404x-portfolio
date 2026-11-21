@@ -196,7 +196,13 @@ const portfolioTranslations = {
     "geoEvidence": "Examine the evidence",
     "geoMap": "Mark a location on the map",
     "geoCase": "Close the case",
-    "geoTag": "Geography"
+    "geoTag": "Geography",
+    "tunnelIndex": "05 / SELECTIVE VPN ROUTING",
+    "tunnelStep1": "Choose applications",
+    "tunnelStep2": "Select a WireGuard route",
+    "tunnelStep3": "Connect through Proton VPN",
+    "tunnel": "A Windows app that routes selected programs through Proton VPN using WireGuard and WireSock. Manage VPN routes and connection diagnostics in one interface.",
+    "tunnelDownloads": "View downloads"
   },
   "pt": {
     "skip": "Pular para o conteúdo",
@@ -259,7 +265,13 @@ const portfolioTranslations = {
     "geoEvidence": "Examine as evidências",
     "geoMap": "Marque um local no mapa",
     "geoCase": "Encerre o caso",
-    "geoTag": "Geografia"
+    "geoTag": "Geografia",
+    "tunnelIndex": "05 / ROTEAMENTO VPN SELETIVO",
+    "tunnelStep1": "Escolha os aplicativos",
+    "tunnelStep2": "Selecione uma rota WireGuard",
+    "tunnelStep3": "Conecte pela Proton VPN",
+    "tunnel": "Aplicativo para Windows que direciona programas selecionados pela Proton VPN usando WireGuard e WireSock. Gerencie rotas VPN e diagnósticos de conexão em uma interface.",
+    "tunnelDownloads": "Ver downloads"
   },
   "es": {
     "skip": "Saltar al contenido",
@@ -322,7 +334,13 @@ const portfolioTranslations = {
     "geoEvidence": "Examina las pruebas",
     "geoMap": "Marca un lugar en el mapa",
     "geoCase": "Cierra el caso",
-    "geoTag": "Geografía"
+    "geoTag": "Geografía",
+    "tunnelIndex": "05 / ENRUTAMIENTO VPN SELECTIVO",
+    "tunnelStep1": "Elige las aplicaciones",
+    "tunnelStep2": "Selecciona una ruta WireGuard",
+    "tunnelStep3": "Conecta mediante Proton VPN",
+    "tunnel": "Aplicación para Windows que dirige programas seleccionados por Proton VPN mediante WireGuard y WireSock. Gestiona rutas VPN y diagnósticos de conexión desde una interfaz.",
+    "tunnelDownloads": "Ver descargas"
   },
   "zh": {
     "skip": "跳转到内容",
@@ -385,7 +403,13 @@ const portfolioTranslations = {
     "geoEvidence": "查看线索",
     "geoMap": "在地图上标记地点",
     "geoCase": "结案",
-    "geoTag": "地理"
+    "geoTag": "地理",
+    "tunnelIndex": "05 / 选择性 VPN 路由",
+    "tunnelStep1": "选择应用程序",
+    "tunnelStep2": "选择 WireGuard 路由",
+    "tunnelStep3": "通过 Proton VPN 连接",
+    "tunnel": "Windows 应用程序，借助 WireGuard 和 WireSock 使选定程序通过 Proton VPN 连接，并在同一界面管理 VPN 路由和连接诊断。",
+    "tunnelDownloads": "查看下载"
   },
   "ja": {
     "skip": "本文に移動",
@@ -448,7 +472,13 @@ const portfolioTranslations = {
     "geoEvidence": "証拠を調べる",
     "geoMap": "地図に地点を示す",
     "geoCase": "事件を解決する",
-    "geoTag": "地理"
+    "geoTag": "地理",
+    "tunnelIndex": "05 / 選択的 VPN ルーティング",
+    "tunnelStep1": "アプリを選択",
+    "tunnelStep2": "WireGuard ルートを選択",
+    "tunnelStep3": "Proton VPN で接続",
+    "tunnel": "WireGuard と WireSock を使い、選択したプログラムだけを Proton VPN 経由で通信させる Windows アプリ。VPN ルートと接続診断を一つの画面で管理できます。",
+    "tunnelDownloads": "ダウンロードを見る"
   },
   "ru": {
     "skip": "Перейти к содержанию",
@@ -511,7 +541,13 @@ const portfolioTranslations = {
     "geoEvidence": "Изучите улики",
     "geoMap": "Отметьте место на карте",
     "geoCase": "Закройте дело",
-    "geoTag": "География"
+    "geoTag": "География",
+    "tunnelIndex": "05 / ВЫБОРОЧНАЯ МАРШРУТИЗАЦИЯ VPN",
+    "tunnelStep1": "Выберите приложения",
+    "tunnelStep2": "Выберите маршрут WireGuard",
+    "tunnelStep3": "Подключитесь через Proton VPN",
+    "tunnel": "Приложение для Windows, направляющее трафик выбранных программ через Proton VPN с помощью WireGuard и WireSock. Управляйте маршрутами VPN и диагностикой подключений в одном окне.",
+    "tunnelDownloads": "Посмотреть загрузки"
   },
   "fr": {
     "skip": "Aller au contenu",
@@ -574,7 +610,13 @@ const portfolioTranslations = {
     "geoEvidence": "Examinez les indices",
     "geoMap": "Placez un point sur la carte",
     "geoCase": "Clôturez l’enquête",
-    "geoTag": "Géographie"
+    "geoTag": "Géographie",
+    "tunnelIndex": "05 / ROUTAGE VPN SÉLECTIF",
+    "tunnelStep1": "Choisir les applications",
+    "tunnelStep2": "Choisir une route WireGuard",
+    "tunnelStep3": "Se connecter via Proton VPN",
+    "tunnel": "Application Windows qui fait passer les programmes sélectionnés par Proton VPN avec WireGuard et WireSock. Gérez les routes VPN et les diagnostics de connexion dans une seule interface.",
+    "tunnelDownloads": "Voir les téléchargements"
   },
   "de": {
     "skip": "Zum Inhalt",
@@ -637,7 +679,13 @@ const portfolioTranslations = {
     "geoEvidence": "Hinweise prüfen",
     "geoMap": "Ort auf der Karte markieren",
     "geoCase": "Fall abschließen",
-    "geoTag": "Geografie"
+    "geoTag": "Geografie",
+    "tunnelIndex": "05 / SELEKTIVES VPN-ROUTING",
+    "tunnelStep1": "Anwendungen auswählen",
+    "tunnelStep2": "WireGuard-Route wählen",
+    "tunnelStep3": "Über Proton VPN verbinden",
+    "tunnel": "Windows-App, die ausgewählte Programme über Proton VPN mit WireGuard und WireSock leitet. VPN-Routen und Verbindungsdiagnosen lassen sich zentral verwalten.",
+    "tunnelDownloads": "Downloads ansehen"
   },
   "it": {
     "skip": "Vai al contenuto",
@@ -700,7 +748,13 @@ const portfolioTranslations = {
     "geoEvidence": "Esamina gli indizi",
     "geoMap": "Segna un punto sulla mappa",
     "geoCase": "Chiudi il caso",
-    "geoTag": "Geografia"
+    "geoTag": "Geografia",
+    "tunnelIndex": "05 / INSTRADAMENTO VPN SELETTIVO",
+    "tunnelStep1": "Scegli le applicazioni",
+    "tunnelStep2": "Seleziona una rotta WireGuard",
+    "tunnelStep3": "Connettiti tramite Proton VPN",
+    "tunnel": "App Windows che instrada i programmi selezionati tramite Proton VPN usando WireGuard e WireSock. Gestisci rotte VPN e diagnostica delle connessioni in un'unica interfaccia.",
+    "tunnelDownloads": "Visualizza download"
   },
   "nl": {
     "skip": "Naar inhoud",
@@ -763,7 +817,13 @@ const portfolioTranslations = {
     "geoEvidence": "Onderzoek het bewijs",
     "geoMap": "Markeer een plek op de kaart",
     "geoCase": "Sluit de zaak",
-    "geoTag": "Aardrijkskunde"
+    "geoTag": "Aardrijkskunde",
+    "tunnelIndex": "05 / SELECTIEVE VPN-ROUTING",
+    "tunnelStep1": "Kies toepassingen",
+    "tunnelStep2": "Selecteer een WireGuard-route",
+    "tunnelStep3": "Maak verbinding via Proton VPN",
+    "tunnel": "Windows-app die geselecteerde programma's via Proton VPN leidt met WireGuard en WireSock. Beheer VPN-routes en verbindingsdiagnostiek vanuit één interface.",
+    "tunnelDownloads": "Downloads bekijken"
   },
   "pl": {
     "skip": "Przejdź do treści",
@@ -826,7 +886,13 @@ const portfolioTranslations = {
     "geoEvidence": "Zbadaj dowody",
     "geoMap": "Zaznacz miejsce na mapie",
     "geoCase": "Zamknij sprawę",
-    "geoTag": "Geografia"
+    "geoTag": "Geografia",
+    "tunnelIndex": "05 / SELEKTYWNE TRASOWANIE VPN",
+    "tunnelStep1": "Wybierz aplikacje",
+    "tunnelStep2": "Wybierz trasę WireGuard",
+    "tunnelStep3": "Połącz przez Proton VPN",
+    "tunnel": "Aplikacja Windows kierująca wybrane programy przez Proton VPN za pomocą WireGuard i WireSock. Zarządzaj trasami VPN i diagnostyką połączeń w jednym interfejsie.",
+    "tunnelDownloads": "Zobacz pliki do pobrania"
   },
   "sv": {
     "skip": "Hoppa till innehållet",
@@ -889,7 +955,13 @@ const portfolioTranslations = {
     "geoEvidence": "Granska bevisen",
     "geoMap": "Markera en plats på kartan",
     "geoCase": "Avsluta fallet",
-    "geoTag": "Geografi"
+    "geoTag": "Geografi",
+    "tunnelIndex": "05 / SELEKTIV VPN-ROUTNING",
+    "tunnelStep1": "Välj appar",
+    "tunnelStep2": "Välj en WireGuard-rutt",
+    "tunnelStep3": "Anslut via Proton VPN",
+    "tunnel": "Windows-app som leder valda program via Proton VPN med WireGuard och WireSock. Hantera VPN-rutter och anslutningsdiagnostik i ett gränssnitt.",
+    "tunnelDownloads": "Visa nedladdningar"
   },
   "tr": {
     "skip": "İçeriğe geç",
@@ -952,7 +1024,13 @@ const portfolioTranslations = {
     "geoEvidence": "Kanıtları incele",
     "geoMap": "Haritada bir yer işaretle",
     "geoCase": "Vakayı kapat",
-    "geoTag": "Coğrafya"
+    "geoTag": "Coğrafya",
+    "tunnelIndex": "05 / SEÇİCİ VPN YÖNLENDİRMESİ",
+    "tunnelStep1": "Uygulamaları seç",
+    "tunnelStep2": "WireGuard rotası seç",
+    "tunnelStep3": "Proton VPN üzerinden bağlan",
+    "tunnel": "Seçilen programları WireGuard ve WireSock kullanarak Proton VPN üzerinden yönlendiren Windows uygulaması. VPN rotalarını ve bağlantı tanılamalarını tek arayüzden yönetin.",
+    "tunnelDownloads": "İndirmeleri görüntüle"
   },
   "ar": {
     "skip": "انتقل إلى المحتوى",
@@ -1015,7 +1093,13 @@ const portfolioTranslations = {
     "geoEvidence": "افحص الأدلة",
     "geoMap": "حدّد موقعًا على الخريطة",
     "geoCase": "أغلق القضية",
-    "geoTag": "الجغرافيا"
+    "geoTag": "الجغرافيا",
+    "tunnelIndex": "05 / توجيه VPN انتقائي",
+    "tunnelStep1": "اختر التطبيقات",
+    "tunnelStep2": "اختر مسار WireGuard",
+    "tunnelStep3": "اتصل عبر Proton VPN",
+    "tunnel": "تطبيق Windows يوجّه البرامج المحددة عبر Proton VPN باستخدام WireGuard وWireSock، مع إدارة مسارات VPN وتشخيص الاتصال من واجهة واحدة.",
+    "tunnelDownloads": "عرض التنزيلات"
   },
   "he": {
     "skip": "דלג לתוכן",
@@ -1078,7 +1162,13 @@ const portfolioTranslations = {
     "geoEvidence": "בדקו את הראיות",
     "geoMap": "סמנו מקום במפה",
     "geoCase": "סגרו את התיק",
-    "geoTag": "גאוגרפיה"
+    "geoTag": "גאוגרפיה",
+    "tunnelIndex": "05 / ניתוב VPN סלקטיבי",
+    "tunnelStep1": "בחר יישומים",
+    "tunnelStep2": "בחר נתיב WireGuard",
+    "tunnelStep3": "התחבר דרך Proton VPN",
+    "tunnel": "יישום Windows שמנתב תוכניות נבחרות דרך Proton VPN בעזרת WireGuard ו-WireSock. מאפשר לנהל נתיבי VPN ואבחון חיבור מממשק אחד.",
+    "tunnelDownloads": "הצג הורדות"
   },
   "ko": {
     "skip": "본문으로 건너뛰기",
@@ -1141,7 +1231,13 @@ const portfolioTranslations = {
     "geoEvidence": "증거 조사",
     "geoMap": "지도에 위치 표시",
     "geoCase": "사건 종결",
-    "geoTag": "지리"
+    "geoTag": "지리",
+    "tunnelIndex": "05 / 선택적 VPN 라우팅",
+    "tunnelStep1": "앱 선택",
+    "tunnelStep2": "WireGuard 경로 선택",
+    "tunnelStep3": "Proton VPN으로 연결",
+    "tunnel": "WireGuard와 WireSock을 사용해 선택한 프로그램만 Proton VPN으로 연결하는 Windows 앱입니다. 하나의 화면에서 VPN 경로와 연결 진단을 관리할 수 있습니다.",
+    "tunnelDownloads": "다운로드 보기"
   },
   "th": {
     "skip": "ข้ามไปยังเนื้อหา",
@@ -1204,7 +1300,13 @@ const portfolioTranslations = {
     "geoEvidence": "ตรวจสอบหลักฐาน",
     "geoMap": "ทำเครื่องหมายบนแผนที่",
     "geoCase": "ปิดคดี",
-    "geoTag": "ภูมิศาสตร์"
+    "geoTag": "ภูมิศาสตร์",
+    "tunnelIndex": "05 / การกำหนดเส้นทาง VPN เฉพาะแอป",
+    "tunnelStep1": "เลือกแอป",
+    "tunnelStep2": "เลือกเส้นทาง WireGuard",
+    "tunnelStep3": "เชื่อมต่อผ่าน Proton VPN",
+    "tunnel": "แอป Windows ที่ส่งข้อมูลเฉพาะโปรแกรมที่เลือกผ่าน Proton VPN โดยใช้ WireGuard และ WireSock พร้อมจัดการเส้นทาง VPN และตรวจสอบการเชื่อมต่อในหน้าจอเดียว",
+    "tunnelDownloads": "ดูดาวน์โหลด"
   },
   "vi": {
     "skip": "Đến nội dung",
@@ -1267,7 +1369,13 @@ const portfolioTranslations = {
     "geoEvidence": "Xem xét bằng chứng",
     "geoMap": "Đánh dấu vị trí trên bản đồ",
     "geoCase": "Khép lại vụ án",
-    "geoTag": "Địa lý"
+    "geoTag": "Địa lý",
+    "tunnelIndex": "05 / ĐỊNH TUYẾN VPN CHỌN LỌC",
+    "tunnelStep1": "Chọn ứng dụng",
+    "tunnelStep2": "Chọn tuyến WireGuard",
+    "tunnelStep3": "Kết nối qua Proton VPN",
+    "tunnel": "Ứng dụng Windows định tuyến các chương trình đã chọn qua Proton VPN bằng WireGuard và WireSock. Quản lý tuyến VPN và chẩn đoán kết nối trong một giao diện.",
+    "tunnelDownloads": "Xem bản tải xuống"
   },
   "id": {
     "skip": "Lewati ke konten",
@@ -1330,6 +1438,12 @@ const portfolioTranslations = {
     "geoEvidence": "Periksa bukti",
     "geoMap": "Tandai lokasi di peta",
     "geoCase": "Tutup kasus",
-    "geoTag": "Geografi"
+    "geoTag": "Geografi",
+    "tunnelIndex": "05 / PERUTEAN VPN SELEKTIF",
+    "tunnelStep1": "Pilih aplikasi",
+    "tunnelStep2": "Pilih rute WireGuard",
+    "tunnelStep3": "Hubungkan melalui Proton VPN",
+    "tunnel": "Aplikasi Windows yang mengarahkan program terpilih melalui Proton VPN menggunakan WireGuard dan WireSock. Kelola rute VPN dan diagnostik koneksi dalam satu antarmuka.",
+    "tunnelDownloads": "Lihat unduhan"
   }
 };
