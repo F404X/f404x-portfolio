@@ -16,10 +16,20 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <script>document.documentElement.dataset.view = new URLSearchParams(location.search).get("view") === "retro" ? "retro" : "modern";</script>
   <link rel="stylesheet" href="style.css?v=4535268b7bca">
+  <link rel="stylesheet" href="retro.css?v=444c57c23b24">
   <script src="translations.js?v=e83b23fc6b2f" defer></script>
   <script src="script.js?v=cb926e9b1550" defer></script>
 </head>
 <body>
+  <!-- Decorative homage to the old desktop web; not a real browser UI. -->
+  <div class="retro-browser" aria-hidden="true">
+    <div class="retro-browser__title">
+      <span class="retro-browser__title-text"><span class="retro-browser__icon">e</span><span>F404X's Home Page - Internet Explorer</span></span>
+      <span class="retro-browser__window-controls"><i>_</i><i>□</i><i>×</i></span>
+    </div>
+    <div class="retro-browser__menus"><span>File</span><span>Edit</span><span>View</span><span>Favorites</span><span>Tools</span><span>Help</span></div>
+    <div class="retro-browser__address"><b>Address:</b><span>https://f404x.net/?view=retro</span><em>Go</em></div>
+  </div>
   <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
   <header class="topbar">
     <div class="shell topbar__inner">
@@ -66,6 +76,7 @@
       <small>~ home sweet homepage ~<br>★ welcome to the old internet ★</small>
       <span class="retro-banner__badge">[ WEB 2000s ]</span>
     </div>
+    <div class="retro-ticker" aria-hidden="true"><span>★ ★ ★ WELCOME TO MY HOME PAGE!!! ★ ★ ★ www.f404x.net ★ ★ ★ YOU HAVE FOUND THE OLD WEB ★ ★ ★</span></div>
     <section id="home" class="hero" aria-labelledby="hero-title">
       <canvas id="cursor-canvas" aria-hidden="true"></canvas>
       <div class="hero__intro">
@@ -234,6 +245,12 @@
       </div>
       <p id="email-feedback" class="email-feedback" role="status"></p>
     </section>
+    <div class="retro-badges" aria-hidden="true">
+      <span>WORLD WIDE<br>WEB</span>
+      <span>F404X<br>4EVER!</span>
+      <span>NO<br>POP-UPS</span>
+      <span>BEST VIEWED<br>ONLINE</span>
+    </div>
   </main>
 
   <footer class="shell footer">
