@@ -337,7 +337,7 @@ html[data-view="retro"] .hero h1 {
   font: bold 18px/1.25 "Trebuchet MS", Arial, sans-serif;
   letter-spacing: 0;
 }
-html[data-view="retro"] .hero h1 br { display: none; }
+html[data-view="retro"] .hero h1 br { display: revert; }
 html[data-view="retro"] .hero h1 span { color: #9e187f; }
 html[data-view="retro"] .hero__role { font: bold 11px/1.5 Tahoma,sans-serif; color: #222; }
 html[data-view="retro"] .hero__summary { margin: 6px 0 0; max-width: none; font: 11px/1.5 Tahoma,sans-serif; color: #333; }
