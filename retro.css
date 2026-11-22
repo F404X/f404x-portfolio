@@ -275,7 +275,7 @@ html[data-view="retro"] .retro-ticker > span {
   animation: retro-marquee 18s linear infinite;
 }
 @keyframes retro-marquee {
-  from { transform: translateX(940px); }
+  from { transform: translateX(0); }
   to { transform: translateX(-100%); }
 }
 html[data-view="retro"] .hero {
@@ -293,6 +293,7 @@ html[data-view="retro"] .hero {
   background: #fff;
 }
 html[data-view="retro"] .hero::before {
+  order: -2;
   content: "✿ MY PROFILE ✿";
   display: block;
   padding: 5px 6px;
