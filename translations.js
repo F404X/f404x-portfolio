@@ -136,6 +136,8 @@ const portfolioLanguages = [
 
 const portfolioTranslations = {
   "en": {
+    "retroView": "Classic web",
+    "modernView": "Modern web",
     "skip": "Skip to content",
     "projects": "Projects",
     "about": "About",
@@ -205,6 +207,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "View downloads"
   },
   "pt": {
+    "retroView": "Internet antiga",
+    "modernView": "Versão moderna",
     "skip": "Pular para o conteúdo",
     "projects": "Projetos",
     "about": "Sobre",
@@ -274,6 +278,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Ver downloads"
   },
   "es": {
+    "retroView": "Web clásica",
+    "modernView": "Versión moderna",
     "skip": "Saltar al contenido",
     "projects": "Proyectos",
     "about": "Sobre mí",
@@ -343,6 +349,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Ver descargas"
   },
   "zh": {
+    "retroView": "怀旧网页",
+    "modernView": "现代版本",
     "skip": "跳转到内容",
     "projects": "项目",
     "about": "关于",
@@ -412,6 +420,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "查看下载"
   },
   "ja": {
+    "retroView": "レトロなウェブ",
+    "modernView": "現代版",
     "skip": "本文に移動",
     "projects": "プロジェクト",
     "about": "自己紹介",
@@ -481,6 +491,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "ダウンロードを見る"
   },
   "ru": {
+    "retroView": "Старый веб",
+    "modernView": "Современная версия",
     "skip": "Перейти к содержанию",
     "projects": "Проекты",
     "about": "Обо мне",
@@ -550,6 +562,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Посмотреть загрузки"
   },
   "fr": {
+    "retroView": "Web rétro",
+    "modernView": "Version moderne",
     "skip": "Aller au contenu",
     "projects": "Projets",
     "about": "À propos",
@@ -619,6 +633,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Voir les téléchargements"
   },
   "de": {
+    "retroView": "Retro-Web",
+    "modernView": "Moderne Ansicht",
     "skip": "Zum Inhalt",
     "projects": "Projekte",
     "about": "Über mich",
@@ -688,6 +704,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Downloads ansehen"
   },
   "it": {
+    "retroView": "Web retrò",
+    "modernView": "Versione moderna",
     "skip": "Vai al contenuto",
     "projects": "Progetti",
     "about": "Chi sono",
@@ -757,6 +775,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Visualizza download"
   },
   "nl": {
+    "retroView": "Retro-web",
+    "modernView": "Moderne versie",
     "skip": "Naar inhoud",
     "projects": "Projecten",
     "about": "Over mij",
@@ -826,6 +846,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Downloads bekijken"
   },
   "pl": {
+    "retroView": "Stara sieć",
+    "modernView": "Nowoczesna wersja",
     "skip": "Przejdź do treści",
     "projects": "Projekty",
     "about": "O mnie",
@@ -895,6 +917,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Zobacz pliki do pobrania"
   },
   "sv": {
+    "retroView": "Retro-webb",
+    "modernView": "Modern version",
     "skip": "Hoppa till innehållet",
     "projects": "Projekt",
     "about": "Om mig",
@@ -964,6 +988,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Visa nedladdningar"
   },
   "tr": {
+    "retroView": "Eski internet",
+    "modernView": "Modern sürüm",
     "skip": "İçeriğe geç",
     "projects": "Projeler",
     "about": "Hakkımda",
@@ -1033,6 +1059,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "İndirmeleri görüntüle"
   },
   "ar": {
+    "retroView": "الويب القديم",
+    "modernView": "النسخة الحديثة",
     "skip": "انتقل إلى المحتوى",
     "projects": "المشاريع",
     "about": "نبذة عني",
@@ -1102,6 +1130,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "عرض التنزيلات"
   },
   "he": {
+    "retroView": "אינטרנט ישן",
+    "modernView": "גרסה מודרנית",
     "skip": "דלג לתוכן",
     "projects": "פרויקטים",
     "about": "אודותיי",
@@ -1171,6 +1201,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "הצג הורדות"
   },
   "ko": {
+    "retroView": "레트로 웹",
+    "modernView": "현대 버전",
     "skip": "본문으로 건너뛰기",
     "projects": "프로젝트",
     "about": "소개",
@@ -1240,6 +1272,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "다운로드 보기"
   },
   "th": {
+    "retroView": "เว็บยุคเก่า",
+    "modernView": "เวอร์ชันใหม่",
     "skip": "ข้ามไปยังเนื้อหา",
     "projects": "โปรเจกต์",
     "about": "เกี่ยวกับฉัน",
@@ -1309,6 +1343,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "ดูดาวน์โหลด"
   },
   "vi": {
+    "retroView": "Web cổ điển",
+    "modernView": "Bản hiện đại",
     "skip": "Đến nội dung",
     "projects": "Dự án",
     "about": "Giới thiệu",
@@ -1378,6 +1414,8 @@ const portfolioTranslations = {
     "tunnelDownloads": "Xem bản tải xuống"
   },
   "id": {
+    "retroView": "Web klasik",
+    "modernView": "Versi modern",
     "skip": "Lewati ke konten",
     "projects": "Proyek",
     "about": "Tentang",
