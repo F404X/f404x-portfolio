@@ -1,0 +1,577 @@
+/* Old-web skin, 1998-2005. Both modes read the SAME index.html.
+   Only this stylesheet owns the classic skin. */
+html[data-view="retro"] {
+  color-scheme: light;
+  scroll-padding-top: 12px;
+  --bg: #d2dcf0;
+  --panel: #fff;
+  --art: #e4ecff;
+  --text: #222;
+  --muted: #555;
+  --line: #8ba4c7;
+  --accent: #0039bb;
+  --button: #ddd;
+  --ink: #000;
+  --grid: #eee;
+  --sans: Tahoma, Verdana, Arial, sans-serif;
+  --display: "Comic Sans MS", "Trebuchet MS", cursive;
+  --mono: "Courier New", monospace;
+}
+html[data-view="retro"] body {
+  min-width: 0;
+  color: #151515;
+  font: 12px/1.45 Tahoma, Verdana, Arial, sans-serif;
+  background-color: #a6bfd6;
+  /* Chunky repeating wallpaper, rather than a modern gradient/card background. */
+  background-image:
+    linear-gradient(45deg, #8eafc2 25%, transparent 25%),
+    linear-gradient(-45deg, #8eafc2 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #8eafc2 75%),
+    linear-gradient(-45deg, transparent 75%, #8eafc2 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+}
+html[data-view="retro"] * { border-radius: 0 !important; }
+html[data-view="retro"] :is(h1,h2,h3) { letter-spacing: 0; line-height: 1.25; }
+html[data-view="retro"] a { color: #0033cc; text-decoration: underline; }
+html[data-view="retro"] a:visited { color: #663399; }
+html[data-view="retro"] a:hover { color: #c00087; text-decoration: underline; }
+html[data-view="retro"] :is(a,button,input):focus-visible {
+  outline: 2px dotted #000;
+  outline-offset: 2px;
+}
+html[data-view="retro"] .shell { width: min(940px, calc(100% - 20px)); }
+
+/* A decorative Windows/IE-like browser frame with a title bar and address field. */
+html[data-view="retro"] .retro-browser {
+  display: block;
+  width: min(940px, calc(100% - 20px));
+  margin: 12px auto 0;
+  padding: 3px;
+  border: 2px solid;
+  border-color: #fff #535353 #535353 #fff;
+  background: #c0c0c0;
+  color: #000;
+  font: 11px/1.3 Tahoma, Arial, sans-serif;
+  box-shadow: 3px 3px 0 #566f80;
+}
+html[data-view="retro"] .retro-browser__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 4px 3px 6px;
+  background: linear-gradient(90deg, #000080 0%, #1366b1 85%, #5fa4dc 100%);
+  color: white;
+  font-weight: bold;
+}
+html[data-view="retro"] .retro-browser__title-text { display: flex; gap: 6px; align-items: center; min-width: 0; }
+html[data-view="retro"] .retro-browser__title-text span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html[data-view="retro"] .retro-browser__icon { font: bold 15px/1 Arial, sans-serif; color: #ffe72a; text-shadow: 1px 1px #e4002c; }
+html[data-view="retro"] .retro-browser__window-controls { display: flex; gap: 2px; flex: none; }
+html[data-view="retro"] .retro-browser__window-controls i {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 16px;
+  border: 2px solid;
+  border-color: #fff #606060 #606060 #fff;
+  background: #c0c0c0;
+  color: #000;
+  font: bold 12px/1 Arial, sans-serif;
+  font-style: normal;
+}
+html[data-view="retro"] .retro-browser__menus {
+  display: flex;
+  gap: 16px;
+  padding: 5px 7px 4px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+html[data-view="retro"] .retro-browser__address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 29px;
+  padding: 3px 5px;
+  border-top: 1px solid #888;
+}
+html[data-view="retro"] .retro-browser__address b { font-weight: normal; }
+html[data-view="retro"] .retro-browser__address span {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 5px 3px;
+  border: 2px inset #fff;
+  background: white;
+  color: #000;
+  font: 11px/1.1 "Courier New", monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html[data-view="retro"] .retro-browser__address em {
+  padding: 4px 9px;
+  border: 2px outset #dedede;
+  color: #000;
+  background: #c0c0c0;
+  font: 11px/1 Arial, sans-serif;
+  font-style: normal;
+}
+
+/* Non-sticky early-2000s navigation strip */
+html[data-view="retro"] .topbar {
+  position: static;
+  width: min(940px, calc(100% - 20px));
+  margin-inline: auto;
+  border: 0;
+  border-left: 2px ridge #efefef;
+  border-right: 2px ridge #efefef;
+  border-bottom: 2px solid #16396a;
+  background: #386bb3;
+  box-shadow: none;
+}
+html[data-view="retro"] .topbar__inner {
+  width: 100%;
+  min-height: 43px;
+  padding: 4px 8px;
+  gap: 4px 10px;
+}
+html[data-view="retro"] .brand {
+  display: inline-block;
+  padding: 1px 3px;
+  color: #ffff66 !important;
+  font: bold 20px/1.15 "Trebuchet MS", Arial, sans-serif;
+  text-shadow: 2px 2px 0 #002c7a;
+  text-decoration: none;
+}
+html[data-view="retro"] .brand span { color: #ffbadf; }
+html[data-view="retro"] .topbar nav { display: flex; gap: 0; }
+html[data-view="retro"] .topbar nav a {
+  min-height: 25px;
+  padding: 4px 8px;
+  margin-right: 2px;
+  border: 1px solid #6698d5;
+  background: #164e9a;
+  color: #fff !important;
+  font: bold 11px/1.3 Tahoma, sans-serif;
+  text-shadow: none;
+  text-decoration: underline;
+}
+html[data-view="retro"] .topbar nav a:hover { color: #ffe600 !important; background: #032c76; }
+html[data-view="retro"] .topbar__controls { display: flex; gap: 5px; }
+html[data-view="retro"] #theme-toggle { display: none; }
+html[data-view="retro"] .view-switch--retro { display: none; }
+html[data-view="retro"] .view-switch--modern {
+  display: inline-flex;
+  gap: 4px;
+  min-height: 26px;
+  padding: 2px 7px;
+  border: 2px outset #ddd;
+  background: #c0c0c0;
+  color: #000 !important;
+  font: 11px/1.2 Tahoma, sans-serif;
+  text-decoration: none;
+}
+html[data-view="retro"] .view-switch--modern:active { border-style: inset; }
+html[data-view="retro"] .view-switch__return { font: bold 18px/1 "Times New Roman", serif; }
+html[data-view="retro"] .language-trigger {
+  min-height: 26px;
+  padding: 2px 6px;
+  border: 2px outset #ddd;
+  background: #c0c0c0;
+  color: #000;
+  font: 11px/1 Tahoma, sans-serif;
+}
+html[data-view="retro"] .language-trigger span:first-child { color: navy; }
+html[data-view="retro"] .language-panel {
+  top: calc(100% + 3px);
+  border: 2px outset #fff;
+  background: #c0c0c0;
+  box-shadow: 3px 3px #555;
+  color: #000;
+}
+html[data-view="retro"] .language-panel input { background: white; color: #000; border: 2px inset #fff; }
+html[data-view="retro"] .language-option { color: #000; font-size: 11px; }
+html[data-view="retro"] .language-option:hover,
+html[data-view="retro"] .language-option[aria-pressed="true"] { background: navy; color: #fff; }
+
+/* Every section uses existing markup and the SAME project dataset. */
+html[data-view="retro"] #main {
+  display: grid;
+  grid-template-columns: 205px minmax(0, 1fr);
+  grid-template-rows: auto auto repeat(4,auto) auto;
+  column-gap: 8px;
+  row-gap: 8px;
+  align-items: start;
+  padding: 8px;
+  border: 2px ridge #e8e8e8;
+  border-top: 0;
+  background: #e6e5eb;
+  box-shadow: 3px 3px 0 #506379;
+}
+html[data-view="retro"] .retro-banner {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: block;
+  min-height: 105px;
+  padding: 9px 10px;
+  border: 3px ridge #ffdcff;
+  outline: 2px solid #6e37a2;
+  outline-offset: -5px;
+  text-align: center;
+  color: #ffff00;
+  background:
+    repeating-linear-gradient(90deg, #18005d 0 7px, #2c0b83 7px 14px);
+  box-shadow: inset 0 0 0 6px #a526a8;
+}
+html[data-view="retro"] .retro-banner strong {
+  display: block;
+  color: #fdfb59;
+  font: 900 clamp(28px, 6vw, 51px)/1.1 "Comic Sans MS", "Trebuchet MS", cursive;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 0 #ff23b0, -2px -2px 0 #00ceff, 5px 5px 0 #000;
+}
+html[data-view="retro"] .retro-banner small {
+  display: block;
+  padding-top: 4px;
+  color: #fff;
+  font: bold 11px/1.4 "Courier New", monospace;
+  text-shadow: 1px 1px 0 #000;
+}
+html[data-view="retro"] .retro-banner__star {
+  display: inline-block;
+  padding-inline: 10px;
+  color: #00ffe9;
+  font-size: 18px;
+}
+html[data-view="retro"] .retro-banner__badge {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 8px;
+  border: 2px outset #ffeb8d;
+  background: #ffe45b;
+  color: #7a006a;
+  font: bold 10px/1.2 "Courier New", monospace;
+}
+html[data-view="retro"] .retro-ticker {
+  display: block;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  overflow: hidden;
+  border: 1px solid #8e8e8e;
+  background: #ffffc4;
+  color: #c00079;
+  font: bold 11px/1.4 "Courier New", monospace;
+}
+html[data-view="retro"] .retro-ticker > span {
+  display: block;
+  white-space: nowrap;
+  width: max-content;
+  padding: 4px 8px;
+  animation: retro-marquee 18s linear infinite;
+}
+@keyframes retro-marquee {
+  from { transform: translateX(940px); }
+  to { transform: translateX(-100%); }
+}
+html[data-view="retro"] .hero {
+  grid-column: 1;
+  grid-row: 3 / span 4;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: start;
+  min-width: 0;
+  gap: 6px;
+  overflow: visible;
+  padding: 5px;
+  border: 1px solid #86a7cb;
+  background: #fff;
+}
+html[data-view="retro"] .hero::before {
+  content: "✿ MY PROFILE ✿";
+  display: block;
+  padding: 5px 6px;
+  background: #7d3c9f;
+  color: #fff;
+  border: 1px solid #4f236e;
+  font: bold 12px/1.2 "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+}
+html[data-view="retro"] #cursor-canvas { display: none; }
+html[data-view="retro"] .portrait {
+  order: -1;
+  max-width: 100%;
+  width: 100%;
+  padding: 2px;
+  margin: 0;
+}
+html[data-view="retro"] .portrait__frame {
+  padding: 4px;
+  border: 2px ridge #c2c2c2;
+  background: #eee;
+}
+html[data-view="retro"] .portrait img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+html[data-view="retro"] figcaption {
+  display: block;
+  margin: 3px 0 4px;
+  color: #777;
+  font: 9px/1.35 "Courier New", monospace;
+  letter-spacing: 0;
+  text-align: center;
+}
+html[data-view="retro"] figcaption span { display: block; }
+html[data-view="retro"] .hero__intro { padding: 4px 5px 7px; }
+html[data-view="retro"] .eyebrow { color: #98316f; font: bold 10px/1.4 "Courier New",monospace; letter-spacing: 0; }
+html[data-view="retro"] .marker { width: 6px; height: 6px; background: #f02f93; }
+html[data-view="retro"] .hero h1 {
+  margin: 7px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #b6b6b6;
+  color: #0038c2;
+  font: bold 18px/1.25 "Trebuchet MS", Arial, sans-serif;
+  letter-spacing: 0;
+}
+html[data-view="retro"] .hero h1 br { display: none; }
+html[data-view="retro"] .hero h1 span { color: #9e187f; }
+html[data-view="retro"] .hero__role { font: bold 11px/1.5 Tahoma,sans-serif; color: #222; }
+html[data-view="retro"] .hero__summary { margin: 6px 0 0; max-width: none; font: 11px/1.5 Tahoma,sans-serif; color: #333; }
+html[data-view="retro"] .hero .actions { display: flex; flex-direction: column; gap: 4px; margin-top: 11px; }
+html[data-view="retro"] .button {
+  min-height: 27px;
+  padding: 4px 6px;
+  border: 2px outset #eee;
+  background: #c0c0c0;
+  color: #000 !important;
+  box-shadow: none;
+  font: 11px/1.2 Tahoma, sans-serif;
+  text-decoration: none;
+}
+html[data-view="retro"] .button--primary { background: #ffc8e4; border-color: #ffeff5 #ca74ac #ca74ac #ffeff5; }
+html[data-view="retro"] .button:hover, html[data-view="retro"] .button--primary:hover { color: #000 !important; background: #ffffaf; }
+html[data-view="retro"] .button:active { border-style: inset; transform: none; }
+html[data-view="retro"] .section {
+  min-width: 0;
+  padding: 5px;
+  border: 1px solid #95accd;
+  background: #fff;
+}
+html[data-view="retro"] #projetos { grid-column: 2; grid-row: 3; }
+html[data-view="retro"] #sobre { grid-column: 2; grid-row: 4; }
+html[data-view="retro"] #habilidades { grid-column: 2; grid-row: 5; }
+html[data-view="retro"] #contato { grid-column: 2; grid-row: 6; }
+html[data-view="retro"] .section > .eyebrow { padding: 4px 6px 0; }
+html[data-view="retro"] .section h2 {
+  display: block;
+  margin: 3px 0 5px;
+  padding: 5px 8px;
+  border: 1px solid #0c3b91;
+  border-left: 0;
+  background: #2056a0;
+  color: #fff;
+  font: bold 14px/1.25 "Trebuchet MS", Arial, sans-serif;
+  text-shadow: 1px 1px #073b86;
+}
+html[data-view="retro"] .section__intro { margin: 5px 6px; color: #444; font: 11px/1.55 Tahoma,sans-serif; }
+html[data-view="retro"] .projects { display: block; margin: 0; }
+html[data-view="retro"] .project {
+  display: block;
+  margin: 5px 0 8px;
+  border: 1px solid #91add3;
+  background: #fff;
+  overflow: visible;
+  box-shadow: none;
+  cursor: auto;
+  transition: none;
+}
+html[data-view="retro"] .project:nth-child(even) { background: #f4f5ff; }
+html[data-view="retro"] .project__art {
+  display: block;
+  min-height: 0;
+  padding: 4px 7px;
+  background: #d5e5fa;
+  border-bottom: 1px dotted #819ec5;
+}
+html[data-view="retro"] .project__index {
+  color: #000080;
+  font: bold 10px/1.5 "Courier New",monospace;
+  letter-spacing: 0;
+}
+html[data-view="retro"] .code-sample,
+html[data-view="retro"] .bot-flow { display: none; }
+html[data-view="retro"] .project__body {
+  display: block;
+  padding: 7px 8px 9px;
+  color: #222;
+}
+html[data-view="retro"] .project h3 {
+  margin: 0 0 5px;
+  color: #0033cc;
+  font: bold 13px/1.3 Tahoma,Verdana,sans-serif;
+  text-decoration: underline;
+}
+html[data-view="retro"] .project p { margin: 0; color: #242424; font: 11px/1.5 Tahoma,sans-serif; }
+html[data-view="retro"] .chips { gap: 4px; margin: 5px 0 7px; }
+html[data-view="retro"] .chips li {
+  padding: 1px 5px;
+  border: 1px solid #c4a6d4;
+  background: #f2e5fb;
+  color: #58267e;
+  font: 10px/1.35 "Courier New",monospace;
+}
+html[data-view="retro"] .project__actions { display: flex; flex-wrap: wrap; gap: 4px 9px; margin: 0; }
+html[data-view="retro"] .project .text-link {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 2px;
+  font: bold 11px/1.3 Tahoma,sans-serif;
+  text-decoration: underline;
+}
+html[data-view="retro"] .project .text-link::after { content: none; }
+html[data-view="retro"] .project__visit { position: relative; z-index: 1; }
+html[data-view="retro"] .project:hover,
+html[data-view="retro"] .project:active,
+html[data-view="retro"] .toolkit__group:hover,
+html[data-view="retro"] .social-link:hover { transform: none; box-shadow: none; }
+html[data-view="retro"] .project:focus-within { border-color: #b638ad; box-shadow: none; }
+html[data-view="retro"] .about { display: block; }
+html[data-view="retro"] .about__copy { padding: 5px 7px 8px; max-width: none; color: #333; font: 11px/1.6 Tahoma,sans-serif; }
+html[data-view="retro"] .about__copy p + p { margin-top: 8px; }
+html[data-view="retro"] .toolkit {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin: 5px 0 3px;
+}
+html[data-view="retro"] .toolkit__group {
+  padding: 6px 7px;
+  border: 1px dashed #9d9d9d;
+  background: #fff9e4;
+  transition: none;
+}
+html[data-view="retro"] .toolkit h3 {
+  margin: 0 0 5px;
+  color: #9c1479;
+  font: bold 11px/1.4 Tahoma,sans-serif;
+}
+html[data-view="retro"] .social-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin: 6px 0;
+}
+html[data-view="retro"] .social-link {
+  min-height: 29px;
+  padding: 4px 5px;
+  border: 1px solid #a4b9ce;
+  background: #e9f1fc;
+  color: #0033cc;
+  font: 11px/1.3 Tahoma,sans-serif;
+  text-decoration: underline;
+  transition: none;
+}
+html[data-view="retro"] .social-link__mark {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #7998b2;
+  color: #003388;
+  background: #fff;
+  font: bold 10px/1.4 "Courier New", monospace;
+}
+html[data-view="retro"] .social-link__arrow { color: #c00087; }
+html[data-view="retro"] .contact .actions { margin: 5px 0; }
+html[data-view="retro"] #contato h2 { color: #fff; }
+html[data-view="retro"] .email-feedback { color: #333; font-size: 11px; }
+
+/* The badges deliberately look like the 88x31 GIF-button collections. */
+html[data-view="retro"] .retro-badges {
+  display: flex;
+  grid-column: 1 / -1;
+  grid-row: 7;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px 8px;
+  padding: 8px 5px;
+  border: 2px inset #d6d6d6;
+  background: #c0c0c0;
+}
+html[data-view="retro"] .retro-badges span {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 31px;
+  border: 2px ridge #fff;
+  background: #17175e;
+  color: #0cffc9;
+  text-align: center;
+  font: bold 10px/1.1 "Courier New", monospace;
+}
+html[data-view="retro"] .retro-badges span:nth-child(2) { background: #fdf45c; color: #e31361; border-color: #d01a79; }
+html[data-view="retro"] .retro-badges span:nth-child(3) { background: #000; color: #fffa36; border-color: #fffa36; }
+html[data-view="retro"] .retro-badges span:nth-child(4) { background: #1f58b6; color: #fff; border-color: #9bdcff; }
+html[data-view="retro"] .footer {
+  justify-content: space-between;
+  width: min(940px, calc(100% - 20px));
+  margin: 0 auto 22px;
+  padding: 6px 10px;
+  border: 2px ridge #e0e0e0;
+  border-top: none;
+  background: #c0c0c0;
+  color: #333;
+  font: 10px/1.4 "Courier New",monospace;
+}
+html[data-view="retro"] .footer .text-link { color: #0033cc; }
+@media (max-width: 820px) {
+  html[data-view="retro"] #main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    column-gap: 0;
+  }
+  html[data-view="retro"] #main > :is(.retro-banner,.retro-ticker,.hero,.section,.retro-badges) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  html[data-view="retro"] .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 8px;
+  }
+  html[data-view="retro"] .hero::before { grid-column: 1 / -1; }
+  html[data-view="retro"] .portrait { order: 0; max-width: 250px; }
+  html[data-view="retro"] .hero__intro { min-width: 0; }
+  html[data-view="retro"] .hero .actions { flex-direction: row; }
+}
+@media (max-width: 540px) {
+  html[data-view="retro"] .retro-browser { margin-top: 5px; }
+  html[data-view="retro"] .retro-browser__menus { gap: 10px; padding: 4px 5px; font-size: 10px; }
+  html[data-view="retro"] .retro-browser__address { gap: 4px; }
+  html[data-view="retro"] .retro-browser__address b { display: none; }
+  html[data-view="retro"] .retro-browser__address span { font-size: 10px; }
+  html[data-view="retro"] .retro-browser__address em { padding: 3px 5px; }
+  html[data-view="retro"] .topbar__inner { flex-wrap: wrap; padding: 4px; gap: 4px; }
+  html[data-view="retro"] .topbar nav { order: 2; width: 100%; flex-wrap: wrap; }
+  html[data-view="retro"] .topbar nav a { font-size: 10px; padding: 3px 6px; }
+  html[data-view="retro"] .brand { font-size: 17px; }
+  html[data-view="retro"] #main { padding: 5px; row-gap: 5px; }
+  html[data-view="retro"] .retro-banner { min-height: 0; padding: 7px; }
+  html[data-view="retro"] .retro-banner strong { font-size: 30px; }
+  html[data-view="retro"] .retro-banner__star { display: none; }
+  html[data-view="retro"] .hero { display: flex; flex-direction: column; }
+  html[data-view="retro"] .portrait { order: -1; width: min(100%,200px); margin-inline: auto; }
+  html[data-view="retro"] .hero::before { order: -2; }
+  html[data-view="retro"] .hero .actions { flex-direction: row; }
+  html[data-view="retro"] .toolkit { grid-template-columns: minmax(0,1fr); }
+  html[data-view="retro"] .social-links { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  html[data-view="retro"] .retro-badges { gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-view="retro"] .retro-ticker > span { animation: none; white-space: normal; width: auto; }
+  html[data-view="retro"] :is(.project,.toolkit__group,.social-link) { transition: none; }
+}
