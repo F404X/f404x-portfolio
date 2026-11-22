@@ -468,3 +468,403 @@ figcaption span:last-child { color: var(--muted); }
   #theme-toggle-text { display: none; }
   #theme-toggle { min-width: 36px; }
 }
+
+
+/* F404X retro web view: the very same document and project cards, restyled. */
+.view-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-height: 36px;
+  padding: .35rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+  color: var(--text);
+  background: var(--panel);
+  font: 600 .82rem/1.25 var(--sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.view-switch:hover { border-color: var(--accent); color: var(--accent); }
+.view-switch svg { display: block; flex: none; width: 18px; height: 18px; image-rendering: pixelated; }
+.view-switch__return { font: bold 1.4rem/1 Georgia, serif; }
+.view-switch--modern, .retro-banner { display: none; }
+
+:root[data-view="retro"] {
+  color-scheme: light;
+  --bg: #d7e7f7;
+  --panel: #ffffff;
+  --art: #e9f0ff;
+  --text: #28415e;
+  --muted: #596d88;
+  --line: #b4c6df;
+  --accent: #245eaa;
+  --button: #ffd6ec;
+  --ink: #234875;
+  --grid: #acc6e348;
+  --particle: 36, 94, 170;
+  --sans: Verdana, Tahoma, Arial, sans-serif;
+  --display: Verdana, Tahoma, Arial, sans-serif;
+  --mono: "Courier New", monospace;
+}
+html[data-view="retro"] { scroll-padding-top: 7rem; }
+html[data-view="retro"] body {
+  color: #33465e;
+  font: 13px/1.6 Verdana, Tahoma, Arial, sans-serif;
+  background-color: #c6daf1;
+  background-image:
+    radial-gradient(#fcfcffb3 1.5px, transparent 1.5px),
+    radial-gradient(#92b5db70 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+html[data-view="retro"] a { color: #2165aa; }
+html[data-view="retro"] a:hover { text-decoration: underline; }
+html[data-view="retro"] :is(h1, h2, h3) { font-family: Verdana, Tahoma, Arial, sans-serif; letter-spacing: normal; line-height: 1.3; }
+html[data-view="retro"] :is(button, a):focus-visible { outline: 2px dashed #c42484; outline-offset: 3px; }
+html[data-view="retro"] .shell { width: min(1030px, calc(100% - 28px)); }
+html[data-view="retro"] .topbar {
+  position: sticky;
+  border-bottom: 3px solid #6ea7d8;
+  background: linear-gradient(#75aedf, #3675b5);
+  box-shadow: 0 2px 0 #eff8ff;
+}
+html[data-view="retro"] .topbar__inner { min-height: 54px; gap: .7rem 1rem; }
+html[data-view="retro"] .brand {
+  color: white;
+  font: bold 1.5rem/1.2 "Trebuchet MS", Verdana, sans-serif;
+  letter-spacing: -.04em;
+  text-shadow: 1px 2px #2c528f;
+}
+html[data-view="retro"] .brand span { color: #ffe3f2; }
+html[data-view="retro"] .topbar nav { gap: .1rem .4rem; }
+html[data-view="retro"] .topbar nav a {
+  color: white;
+  min-height: 32px;
+  padding: .25rem .5rem;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 1px #315f9b;
+}
+html[data-view="retro"] .topbar nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+  background: #2762a0;
+}
+html[data-view="retro"] .topbar__controls { gap: .4rem; }
+html[data-view="retro"] #theme-toggle { display: none; }
+html[data-view="retro"] .view-switch--retro { display: none; }
+html[data-view="retro"] .view-switch--modern {
+  display: inline-flex;
+  border-radius: 0;
+  background: #fff4fc;
+  border: 2px outset #ffe1f3;
+  color: #a42074;
+  font: bold 11px/1.3 Verdana, sans-serif;
+}
+html[data-view="retro"] .language-trigger {
+  min-height: 32px;
+  border: 2px outset #e4edfb;
+  border-radius: 0;
+  background: #f8fbff;
+  color: #245e99;
+  font-size: 11px;
+}
+html[data-view="retro"] .language-panel {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 #7d9cb8;
+}
+html[data-view="retro"] .language-option { font-size: 12px; }
+html[data-view="retro"] .language-option:hover { background: #e9f2fd; }
+html[data-view="retro"] #main {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  grid-template-rows: auto repeat(4, auto);
+  align-items: start;
+  column-gap: 12px;
+  row-gap: 12px;
+  padding: 12px;
+  border: 1px solid #9cb5d1;
+  border-top: 0;
+  background: #eaf1f9;
+  box-shadow: 0 8px 25px #3f5d7a2b;
+}
+html[data-view="retro"] .retro-banner {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .35rem 1rem;
+  min-height: 88px;
+  padding: 1rem 1.25rem;
+  border: 2px solid white;
+  outline: 1px solid #9eaccb;
+  background:
+    linear-gradient(135deg, #ffffff55 25%, transparent 25%) 0 0 / 22px 22px,
+    linear-gradient(130deg, #b6d8f5, #fbe6f6 60%, #b9dafa);
+  color: #275f99;
+}
+html[data-view="retro"] .retro-banner strong {
+  font: bold clamp(1.8rem, 5vw, 3.2rem)/1 "Trebuchet MS", Verdana, sans-serif;
+  letter-spacing: -.06em;
+  text-shadow: 2px 2px white;
+}
+html[data-view="retro"] .retro-banner small {
+  flex: 1 1 180px;
+  font: bold .7rem/1.6 "Courier New", monospace;
+  text-align: center;
+  color: #8e3c89;
+}
+html[data-view="retro"] .retro-banner__star { font-size: 24px; color: #e77db5; }
+html[data-view="retro"] .retro-banner__badge {
+  padding: 5px 9px;
+  border: 1px dashed #d780b2;
+  background: white;
+  color: #ac3c89;
+  font: bold .7rem/1.2 "Courier New", monospace;
+  white-space: nowrap;
+}
+html[data-view="retro"] .hero {
+  grid-column: 1;
+  grid-row: 2 / span 4;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .9rem;
+  align-self: start;
+  overflow: visible;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #b7c9e1;
+  background: white;
+}
+html[data-view="retro"] #cursor-canvas { display: none; }
+html[data-view="retro"] .hero .portrait {
+  order: -1;
+  width: 100%;
+  max-width: 210px;
+  margin-inline: auto;
+}
+html[data-view="retro"] .portrait__frame {
+  padding: 5px;
+  border: 1px solid #a9b8c9;
+  background: #edf2fa;
+}
+html[data-view="retro"] .portrait img { aspect-ratio: 1; object-fit: cover; }
+html[data-view="retro"] figcaption {
+  display: block;
+  margin-top: 5px;
+  color: #647b98;
+  text-align: center;
+  font: 9px/1.4 "Courier New", monospace;
+  letter-spacing: normal;
+}
+html[data-view="retro"] figcaption span { display: block; }
+html[data-view="retro"] .hero__intro { min-width: 0; }
+html[data-view="retro"] .eyebrow {
+  color: #a83b88;
+  font: bold 10px/1.5 "Courier New", monospace;
+  letter-spacing: .03em;
+}
+html[data-view="retro"] .marker { background: #f18bc3; }
+html[data-view="retro"] .hero h1 {
+  margin: .5rem 0 .6rem;
+  color: #2264a9;
+  font: bold 1.35rem/1.22 Verdana, sans-serif;
+  letter-spacing: -.04em;
+}
+html[data-view="retro"] .hero h1 br { display: none; }
+html[data-view="retro"] .hero h1 span { color: #bb428e; }
+html[data-view="retro"] .hero__role { color: #345b82; font: bold 12px/1.5 Verdana, sans-serif; }
+html[data-view="retro"] .hero__summary { margin-top: .6rem; color: #65748a; font-size: 12px; }
+html[data-view="retro"] .actions { gap: .4rem; margin-top: .9rem; }
+html[data-view="retro"] .button {
+  min-height: 30px;
+  padding: .35rem .5rem;
+  gap: .3rem;
+  border-radius: 0;
+  border: 2px outset #d7e8fc;
+  background: #f3f8ff;
+  color: #185e9b;
+  font-size: 11px;
+  font-weight: bold;
+  box-shadow: none;
+}
+html[data-view="retro"] .button--primary {
+  border-color: #ffd5ed;
+  background: #ffe5f2;
+  color: #a02b76;
+}
+html[data-view="retro"] .button:hover,
+html[data-view="retro"] .button--primary:hover { background: #dbeafb; color: #1c5a93; }
+html[data-view="retro"] .button:active { border-style: inset; transform: none; }
+html[data-view="retro"] .section {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #b7c9e1;
+  background: #fff;
+}
+html[data-view="retro"] #projetos { grid-column: 2; grid-row: 2; }
+html[data-view="retro"] #sobre { grid-column: 2; grid-row: 3; }
+html[data-view="retro"] #habilidades { grid-column: 2; grid-row: 4; }
+html[data-view="retro"] #contato { grid-column: 2; grid-row: 5; }
+html[data-view="retro"] .section h2 {
+  margin: .4rem 0 .6rem;
+  padding: .38rem .65rem;
+  border-left: 5px solid #ed8dc8;
+  background: #e9f2ff;
+  color: #285f9f;
+  font: bold 1.15rem/1.5 Verdana, sans-serif;
+}
+html[data-view="retro"] .projects {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+html[data-view="retro"] .project {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c2d0e4;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+html[data-view="retro"] .project__art {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .25rem .75rem;
+  min-height: 0;
+  padding: .45rem .65rem;
+  border-bottom: 1px solid #cbdbed;
+  background: repeating-linear-gradient(135deg, #edf4fe, #edf4fe 8px, #e6f0fd 8px, #e6f0fd 16px);
+}
+html[data-view="retro"] .project__index {
+  color: #b33883;
+  font: bold 10px/1.4 "Courier New", monospace;
+  letter-spacing: 0;
+}
+html[data-view="retro"] .code-sample {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem .55rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 10px;
+}
+html[data-view="retro"] .code-sample b { color: #be4d9e; }
+html[data-view="retro"] .bot-flow { padding: 0; font-size: 10px; }
+html[data-view="retro"] .bot-flow span { padding: .15rem .3rem; background: #fff; border: 1px solid #c1d3e6; }
+html[data-view="retro"] .project__body {
+  gap: .45rem;
+  padding: .75rem;
+  align-items: stretch;
+}
+html[data-view="retro"] .project h3 { color: #1d5e9e; font: bold 16px/1.4 Verdana, sans-serif; }
+html[data-view="retro"] .project p,
+html[data-view="retro"] .about__copy,
+html[data-view="retro"] .section__intro { color: #526782; font-size: 12px; }
+html[data-view="retro"] .project__actions { gap: .35rem .65rem; align-items: center; }
+html[data-view="retro"] .project .text-link { padding: .2rem; color: #2163ac; font-size: 11px; }
+html[data-view="retro"] .project:focus-within { border-color: #a43c91; box-shadow: 0 0 0 1px #dfacd0; }
+html[data-view="retro"] .chips { gap: .3rem; }
+html[data-view="retro"] .chips li {
+  padding: .12rem .45rem;
+  border: 1px solid #d5cde8;
+  border-radius: 0;
+  background: #f7f0ff;
+  color: #7b4d8a;
+  font: 10px/1.6 "Courier New", monospace;
+}
+html[data-view="retro"] .about { display: block; }
+html[data-view="retro"] .about__copy { max-width: none; }
+html[data-view="retro"] .about__copy p + p { margin-top: .55rem; }
+html[data-view="retro"] .toolkit { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: .7rem; }
+html[data-view="retro"] .toolkit__group {
+  padding: .65rem;
+  border-radius: 0;
+  background: #f9fbff;
+  border: 1px dotted #b4c8df;
+}
+html[data-view="retro"] .toolkit h3 { margin-bottom: .4rem; color: #a4388b; font: bold 12px/1.5 Verdana, sans-serif; }
+html[data-view="retro"] .social-links { gap: .4rem; margin-top: .7rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+html[data-view="retro"] .social-link {
+  min-height: 38px;
+  padding: .4rem .5rem;
+  border: 1px solid #b8cce4;
+  border-radius: 0;
+  background: #f0f6ff;
+  box-shadow: none;
+  font-size: 11px;
+}
+html[data-view="retro"] .social-link__mark {
+  flex-basis: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0;
+  color: #be3c96;
+  background: #fff;
+}
+html[data-view="retro"] .social-link__arrow { color: #ba5395; }
+html[data-view="retro"] #contato h2 { color: #285f9f; }
+html[data-view="retro"] .email-feedback { font-size: 11px; }
+html[data-view="retro"] .footer {
+  margin-block: 0 1rem;
+  padding: .75rem 1rem;
+  border: 1px solid #9eb6d0;
+  border-top: 0;
+  background: #f5f8fe;
+  color: #7286a2;
+  font: 11px/1.5 "Courier New", monospace;
+}
+@media (hover: hover) and (pointer: fine) {
+  html[data-view="retro"] .project:hover,
+  html[data-view="retro"] .toolkit__group:hover,
+  html[data-view="retro"] .social-link:hover {
+    border-color: #d48cba;
+    box-shadow: none;
+    transform: none;
+  }
+}
+@media (max-width: 820px) {
+  html[data-view="retro"] #main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    padding: 8px;
+    row-gap: 8px;
+  }
+  html[data-view="retro"] #main > :is(.retro-banner, .hero, .section) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  html[data-view="retro"] .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+    align-items: center;
+  }
+  html[data-view="retro"] .hero .portrait { order: 0; width: 100%; }
+}
+@media (max-width: 540px) {
+  html[data-view="retro"] .topbar__inner { gap: .25rem .55rem; padding-block: .4rem; }
+  html[data-view="retro"] .brand { font-size: 1.15rem; }
+  html[data-view="retro"] .topbar nav { gap: 0; }
+  html[data-view="retro"] .topbar nav a { padding: .25rem .3rem; font-size: 10px; }
+  html[data-view="retro"] #main { padding: 6px; }
+  html[data-view="retro"] .retro-banner { padding: .65rem; min-height: 0; }
+  html[data-view="retro"] .retro-banner__star { display: none; }
+  html[data-view="retro"] .retro-banner small { flex-basis: 100%; text-align: left; }
+  html[data-view="retro"] .hero { display: flex; flex-direction: column; }
+  html[data-view="retro"] .hero .portrait { order: -1; max-width: 175px; }
+  html[data-view="retro"] .toolkit { grid-template-columns: minmax(0, 1fr); }
+  html[data-view="retro"] .social-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-view="retro"] :is(.project, .toolkit__group, .social-link) { transition: none; }
+}
