@@ -204,7 +204,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Select a WireGuard route",
     "tunnelStep3": "Connect through Proton VPN",
     "tunnel": "A Windows app that routes selected programs through Proton VPN using WireGuard and WireSock. Manage VPN routes and connection diagnostics in one interface.",
-    "tunnelDownloads": "View downloads"
+    "tunnelDownload": "Download"
   },
   "pt": {
     "retroView": "Internet antiga",
@@ -275,7 +275,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Selecione uma rota WireGuard",
     "tunnelStep3": "Conecte pela Proton VPN",
     "tunnel": "Aplicativo para Windows que direciona programas selecionados pela Proton VPN usando WireGuard e WireSock. Gerencie rotas VPN e diagnósticos de conexão em uma interface.",
-    "tunnelDownloads": "Ver downloads"
+    "tunnelDownload": "Baixar"
   },
   "es": {
     "retroView": "Web clásica",
@@ -346,7 +346,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Selecciona una ruta WireGuard",
     "tunnelStep3": "Conecta mediante Proton VPN",
     "tunnel": "Aplicación para Windows que dirige programas seleccionados por Proton VPN mediante WireGuard y WireSock. Gestiona rutas VPN y diagnósticos de conexión desde una interfaz.",
-    "tunnelDownloads": "Ver descargas"
+    "tunnelDownload": "Descargar"
   },
   "zh": {
     "retroView": "怀旧网页",
@@ -417,7 +417,7 @@ const portfolioTranslations = {
     "tunnelStep2": "选择 WireGuard 路由",
     "tunnelStep3": "通过 Proton VPN 连接",
     "tunnel": "Windows 应用程序，借助 WireGuard 和 WireSock 使选定程序通过 Proton VPN 连接，并在同一界面管理 VPN 路由和连接诊断。",
-    "tunnelDownloads": "查看下载"
+    "tunnelDownload": "下载"
   },
   "ja": {
     "retroView": "レトロなウェブ",
@@ -488,7 +488,7 @@ const portfolioTranslations = {
     "tunnelStep2": "WireGuard ルートを選択",
     "tunnelStep3": "Proton VPN で接続",
     "tunnel": "WireGuard と WireSock を使い、選択したプログラムだけを Proton VPN 経由で通信させる Windows アプリ。VPN ルートと接続診断を一つの画面で管理できます。",
-    "tunnelDownloads": "ダウンロードを見る"
+    "tunnelDownload": "ダウンロード"
   },
   "ru": {
     "retroView": "Старый веб",
@@ -559,7 +559,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Выберите маршрут WireGuard",
     "tunnelStep3": "Подключитесь через Proton VPN",
     "tunnel": "Приложение для Windows, направляющее трафик выбранных программ через Proton VPN с помощью WireGuard и WireSock. Управляйте маршрутами VPN и диагностикой подключений в одном окне.",
-    "tunnelDownloads": "Посмотреть загрузки"
+    "tunnelDownload": "Скачать"
   },
   "fr": {
     "retroView": "Web rétro",
@@ -630,7 +630,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Choisir une route WireGuard",
     "tunnelStep3": "Se connecter via Proton VPN",
     "tunnel": "Application Windows qui fait passer les programmes sélectionnés par Proton VPN avec WireGuard et WireSock. Gérez les routes VPN et les diagnostics de connexion dans une seule interface.",
-    "tunnelDownloads": "Voir les téléchargements"
+    "tunnelDownload": "Télécharger"
   },
   "de": {
     "retroView": "Retro-Web",
@@ -701,7 +701,7 @@ const portfolioTranslations = {
     "tunnelStep2": "WireGuard-Route wählen",
     "tunnelStep3": "Über Proton VPN verbinden",
     "tunnel": "Windows-App, die ausgewählte Programme über Proton VPN mit WireGuard und WireSock leitet. VPN-Routen und Verbindungsdiagnosen lassen sich zentral verwalten.",
-    "tunnelDownloads": "Downloads ansehen"
+    "tunnelDownload": "Herunterladen"
   },
   "it": {
     "retroView": "Web retrò",
@@ -772,7 +772,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Seleziona una rotta WireGuard",
     "tunnelStep3": "Connettiti tramite Proton VPN",
     "tunnel": "App Windows che instrada i programmi selezionati tramite Proton VPN usando WireGuard e WireSock. Gestisci rotte VPN e diagnostica delle connessioni in un'unica interfaccia.",
-    "tunnelDownloads": "Visualizza download"
+    "tunnelDownload": "Scarica"
   },
   "nl": {
     "retroView": "Retro-web",
@@ -843,7 +843,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Selecteer een WireGuard-route",
     "tunnelStep3": "Maak verbinding via Proton VPN",
     "tunnel": "Windows-app die geselecteerde programma's via Proton VPN leidt met WireGuard en WireSock. Beheer VPN-routes en verbindingsdiagnostiek vanuit één interface.",
-    "tunnelDownloads": "Downloads bekijken"
+    "tunnelDownload": "Downloaden"
   },
   "pl": {
     "retroView": "Stara sieć",
@@ -914,7 +914,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Wybierz trasę WireGuard",
     "tunnelStep3": "Połącz przez Proton VPN",
     "tunnel": "Aplikacja Windows kierująca wybrane programy przez Proton VPN za pomocą WireGuard i WireSock. Zarządzaj trasami VPN i diagnostyką połączeń w jednym interfejsie.",
-    "tunnelDownloads": "Zobacz pliki do pobrania"
+    "tunnelDownload": "Pobierz"
   },
   "sv": {
     "retroView": "Retro-webb",
@@ -985,7 +985,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Välj en WireGuard-rutt",
     "tunnelStep3": "Anslut via Proton VPN",
     "tunnel": "Windows-app som leder valda program via Proton VPN med WireGuard och WireSock. Hantera VPN-rutter och anslutningsdiagnostik i ett gränssnitt.",
-    "tunnelDownloads": "Visa nedladdningar"
+    "tunnelDownload": "Ladda ner"
   },
   "tr": {
     "retroView": "Eski internet",
@@ -1056,7 +1056,7 @@ const portfolioTranslations = {
     "tunnelStep2": "WireGuard rotası seç",
     "tunnelStep3": "Proton VPN üzerinden bağlan",
     "tunnel": "Seçilen programları WireGuard ve WireSock kullanarak Proton VPN üzerinden yönlendiren Windows uygulaması. VPN rotalarını ve bağlantı tanılamalarını tek arayüzden yönetin.",
-    "tunnelDownloads": "İndirmeleri görüntüle"
+    "tunnelDownload": "İndir"
   },
   "ar": {
     "retroView": "الويب القديم",
@@ -1127,7 +1127,7 @@ const portfolioTranslations = {
     "tunnelStep2": "اختر مسار WireGuard",
     "tunnelStep3": "اتصل عبر Proton VPN",
     "tunnel": "تطبيق Windows يوجّه البرامج المحددة عبر Proton VPN باستخدام WireGuard وWireSock، مع إدارة مسارات VPN وتشخيص الاتصال من واجهة واحدة.",
-    "tunnelDownloads": "عرض التنزيلات"
+    "tunnelDownload": "تنزيل"
   },
   "he": {
     "retroView": "אינטרנט ישן",
@@ -1198,7 +1198,7 @@ const portfolioTranslations = {
     "tunnelStep2": "בחר נתיב WireGuard",
     "tunnelStep3": "התחבר דרך Proton VPN",
     "tunnel": "יישום Windows שמנתב תוכניות נבחרות דרך Proton VPN בעזרת WireGuard ו-WireSock. מאפשר לנהל נתיבי VPN ואבחון חיבור מממשק אחד.",
-    "tunnelDownloads": "הצג הורדות"
+    "tunnelDownload": "הורדה"
   },
   "ko": {
     "retroView": "레트로 웹",
@@ -1269,7 +1269,7 @@ const portfolioTranslations = {
     "tunnelStep2": "WireGuard 경로 선택",
     "tunnelStep3": "Proton VPN으로 연결",
     "tunnel": "WireGuard와 WireSock을 사용해 선택한 프로그램만 Proton VPN으로 연결하는 Windows 앱입니다. 하나의 화면에서 VPN 경로와 연결 진단을 관리할 수 있습니다.",
-    "tunnelDownloads": "다운로드 보기"
+    "tunnelDownload": "다운로드"
   },
   "th": {
     "retroView": "เว็บยุคเก่า",
@@ -1340,7 +1340,7 @@ const portfolioTranslations = {
     "tunnelStep2": "เลือกเส้นทาง WireGuard",
     "tunnelStep3": "เชื่อมต่อผ่าน Proton VPN",
     "tunnel": "แอป Windows ที่ส่งข้อมูลเฉพาะโปรแกรมที่เลือกผ่าน Proton VPN โดยใช้ WireGuard และ WireSock พร้อมจัดการเส้นทาง VPN และตรวจสอบการเชื่อมต่อในหน้าจอเดียว",
-    "tunnelDownloads": "ดูดาวน์โหลด"
+    "tunnelDownload": "ดาวน์โหลด"
   },
   "vi": {
     "retroView": "Web cổ điển",
@@ -1411,7 +1411,7 @@ const portfolioTranslations = {
     "tunnelStep2": "Chọn tuyến WireGuard",
     "tunnelStep3": "Kết nối qua Proton VPN",
     "tunnel": "Ứng dụng Windows định tuyến các chương trình đã chọn qua Proton VPN bằng WireGuard và WireSock. Quản lý tuyến VPN và chẩn đoán kết nối trong một giao diện.",
-    "tunnelDownloads": "Xem bản tải xuống"
+    "tunnelDownload": "Tải xuống"
   },
   "id": {
     "retroView": "Web klasik",
@@ -1482,6 +1482,6 @@ const portfolioTranslations = {
     "tunnelStep2": "Pilih rute WireGuard",
     "tunnelStep3": "Hubungkan melalui Proton VPN",
     "tunnel": "Aplikasi Windows yang mengarahkan program terpilih melalui Proton VPN menggunakan WireGuard dan WireSock. Kelola rute VPN dan diagnostik koneksi dalam satu antarmuka.",
-    "tunnelDownloads": "Lihat unduhan"
+    "tunnelDownload": "Unduh"
   }
 };
