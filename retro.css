@@ -267,16 +267,19 @@ html[data-view="retro"] .retro-ticker {
   color: #c00079;
   font: bold 11px/1.4 "Courier New", monospace;
 }
-html[data-view="retro"] .retro-ticker > span {
-  display: block;
-  white-space: nowrap;
+html[data-view="retro"] .retro-ticker__track {
+  display: flex;
   width: max-content;
+  animation: retro-marquee 36s linear infinite;
+}
+html[data-view="retro"] .retro-ticker__track > span {
+  flex: none;
+  white-space: nowrap;
   padding: 4px 8px;
-  animation: retro-marquee 18s linear infinite;
 }
 @keyframes retro-marquee {
   from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  to { transform: translateX(-50%); }
 }
 html[data-view="retro"] .hero {
   grid-column: 1;
@@ -573,6 +576,8 @@ html[data-view="retro"] .footer .text-link { color: #0033cc; }
   html[data-view="retro"] .retro-badges { gap: 4px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  html[data-view="retro"] .retro-ticker > span { animation: none; white-space: normal; width: auto; }
+  html[data-view="retro"] .retro-ticker__track { animation: none; display: block; width: auto; }
+  html[data-view="retro"] .retro-ticker__track > span { display: block; white-space: normal; }
+  html[data-view="retro"] .retro-ticker__track > span:not(:first-child) { display: none; }
   html[data-view="retro"] :is(.project,.toolkit__group,.social-link) { transition: none; }
 }
